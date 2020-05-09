@@ -1,0 +1,10 @@
+parameter_defaults:
+  DnsServers: ['8.8.8.8']
+  StorageMtu: 9000
+  StorageMgmtMtu: 9000
+  InternalApiMtu: 9000
+  TenantMtu: 9000
+  ExternalMtu: 9000
+  PublicVirtualFixedIPs: [{'ip_address':'172.20.10.25'}]
+  NetworkDeploymentActions: ['CREATE']
+  #NetworkDeploymentActions: ['CREATE','UPDATE']

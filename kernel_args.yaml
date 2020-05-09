@@ -1,0 +1,4 @@
+parameter_defaults:
+  ExtraSysctlSettings:
+    net.ipv4.conf.all.rp_filter:
+      value: 0
