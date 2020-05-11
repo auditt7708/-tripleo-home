@@ -1,0 +1,3 @@
+parameter_defauls:
+  NovaRAMAllocationRatio: 1.5
+  NovaCPUAllocationRatio: 6
