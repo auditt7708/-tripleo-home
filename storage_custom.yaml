@@ -1,2 +1,2 @@
 parameter_defaults:
-  CinderLVMLoopDeviceSize: 850000
+  CinderLVMLoopDeviceSize: 1500000

@@ -1,3 +1,5 @@
-parameter_defauls:
+parameter_defaults:
   NovaRAMAllocationRatio: 1.5
   NovaCPUAllocationRatio: 6
+  ControllerExtraConfig:
+    nova::api::allow_resize_to_same_host: True
