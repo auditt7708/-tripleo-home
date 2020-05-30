@@ -7,7 +7,6 @@ deploy(){
 		-e /usr/share/openstack-tripleo-heat-templates/environments/network-environment.yaml \
 		-e /usr/share/openstack-tripleo-heat-templates/environments/network-isolation.yaml \
                 -e /home/stack/templates/generated-openstack-tripleo-heat-templates/environments/net-multiple-nics-vlans.yaml \
-		-e /usr/share/openstack-tripleo-heat-templates/environments/services/neutron-ovn-dvr-ha.yaml \
 		-e /home/stack/templates/node-info.yaml \
 		-e /home/stack/templates/network-config.yaml \
 		-e /home/stack/templates/storage_custom.yaml \
