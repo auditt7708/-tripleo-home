@@ -168,6 +168,9 @@ resources:
                 routes:
                   list_concat_unique:
                     - get_param: ControlPlaneStaticRoutes
+                    - - default: true
+                        next_hop:
+                          get_param: ControlPlaneDefaultRoute
               - type: ovs_bridge
                 name: br-tenant
                 mtu:
@@ -227,22 +230,7 @@ resources:
                   name: nic2
                   mtu:
                     get_param: ExternalMtu
-                  use_dhcp: false
                   primary: true
-                - type: vlan
-                  mtu:
-                    get_param: ExternalMtu
-                  vlan_id:
-                    get_param: ExternalNetworkVlanID
-                  addresses:
-                  - ip_netmask:
-                      get_param: ExternalIpSubnet
-                  routes:
-                    list_concat_unique:
-                      - get_param: ExternalInterfaceRoutes
-                      - - default: true
-                          next_hop:
-                            get_param: ExternalInterfaceDefaultRoute
 
 outputs:
   OS::stack_id:
