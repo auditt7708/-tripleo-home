@@ -8,3 +8,4 @@ parameter_defaults:
   PublicVirtualFixedIPs: [{'ip_address':'172.20.10.25'}]
   NetworkDeploymentActions: ['CREATE']
   #NetworkDeploymentActions: ['CREATE','UPDATE']
+  NeutronEnableDVR: false
