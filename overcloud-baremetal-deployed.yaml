@@ -1,0 +1,35 @@
+parameter_defaults:
+  ComputeCount: 1
+  ComputeHostnameFormat: '%stackname%-novacompute-%index%'
+  ControllerCount: 1
+  ControllerHostnameFormat: '%stackname%-controller-%index%'
+  DeployedServerPortMap:
+    overcloud-controller-0-ctlplane:
+      fixed_ips:
+      - ip_address: 192.168.24.17
+      network:
+        mtu: 1500
+        tags:
+        - 192.168.24.0/24
+      subnets:
+      - cidr: 192.168.24.0/24
+        dns_nameservers: []
+        gateway_ip: 192.168.24.1
+        host_routes: []
+    overcloud-novacompute-0-ctlplane:
+      fixed_ips:
+      - ip_address: 192.168.24.9
+      network:
+        mtu: 1500
+        tags:
+        - 192.168.24.0/24
+      subnets:
+      - cidr: 192.168.24.0/24
+        dns_nameservers: []
+        gateway_ip: 192.168.24.1
+        host_routes: []
+  HostnameMap:
+    overcloud-controller-0: overcloud-controller-0
+    overcloud-novacompute-0: overcloud-novacompute-0
+resource_registry:
+  OS::TripleO::DeployedServer::ControlPlanePort: /usr/share/openstack-tripleo-heat-templates/deployed-server/deployed-neutron-port.yaml

@@ -1,13 +1,14 @@
 #!/usr/bin/env bash
 
 deploy(){
-	openstack overcloud deploy --templates \
+	openstack overcloud deploy --templates --disable-validations --deployed-server \
 		-r /home/stack/templates/roles_data.yaml \
 		-n /home/stack/templates/network_data.yaml \
+		-e /usr/share/openstack-tripleo-heat-templates/environments/deployed-server-environment.yaml \
+                -e /home/stack/templates/overcloud-baremetal-deployed.yaml \
 		-e /usr/share/openstack-tripleo-heat-templates/environments/network-environment.yaml \
 		-e /usr/share/openstack-tripleo-heat-templates/environments/network-isolation.yaml \
-                -e /home/stack/templates/generated-openstack-tripleo-heat-templates/environments/net-multiple-nics-vlans.yaml \
-		-e /home/stack/templates/node-info.yaml \
+                -e /usr/share/openstack-tripleo-heat-templates/environments/net-multiple-nics.yaml \
 		-e /home/stack/templates/network-config.yaml \
 		-e /home/stack/templates/storage_custom.yaml \
 		-e /home/stack/templates/kernel_args.yaml \
@@ -23,9 +24,10 @@ deploy(){
 
 
 deploy_config_download(){
-        openstack overcloud deploy --templates --config-download-only \
-                -r /home/stack/templates/roles_data.yaml \
+        openstack overcloud deploy --templates --config-download-only --disable-validations --deployed-server \
                 -n /home/stack/templates/network_data.yaml \
+                -e /usr/share/openstack-tripleo-heat-templates/environments/deployed-server-environment.yaml \
+		-e /home/stack/templates/overcloud-baremetal-deployed.yaml \
                 -e /usr/share/openstack-tripleo-heat-templates/environments/network-environment.yaml \
                 -e /usr/share/openstack-tripleo-heat-templates/environments/network-isolation.yaml \
                 -e /home/stack/templates/generated-openstack-tripleo-heat-templates/environments/net-multiple-nics-vlans.yaml \
