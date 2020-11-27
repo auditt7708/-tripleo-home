@@ -18,7 +18,7 @@ parameter_defaults:
         host_routes: []
     overcloud-novacompute-0-ctlplane:
       fixed_ips:
-      - ip_address: 192.168.24.9
+      - ip_address: 192.168.24.11
       network:
         mtu: 1500
         tags:

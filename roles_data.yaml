@@ -30,6 +30,7 @@
   # each, such as ['ControlPlane', 'External']
   default_route_networks: ['External']
   HostnameFormatDefault: '%stackname%-controller-%index%'
+  networks_skip_config: []
   # Deprecated & backward-compatible values (FIXME: Make parameters consistent)
   # Set uses_deprecated_params to True if any deprecated params are used.
   uses_deprecated_params: True

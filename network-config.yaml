@@ -6,6 +6,6 @@ parameter_defaults:
   TenantMtu: 9000
   ExternalMtu: 9000
   PublicVirtualFixedIPs: [{'ip_address':'172.20.10.25'}]
-  #NetworkDeploymentActions: ['CREATE']
-  NetworkDeploymentActions: ['CREATE','UPDATE']
+  NetworkDeploymentActions: ['CREATE']
+  # NetworkDeploymentActions: ['CREATE','UPDATE']
   NeutronEnableDVR: false
