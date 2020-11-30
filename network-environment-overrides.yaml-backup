@@ -18,11 +18,9 @@ resource_registry:
   OS::TripleO::BlockStorage::Net::SoftwareConfig: OS::Heat::None
   OS::TripleO::ObjectStorage::Net::SoftwareConfig: OS::Heat::None
   OS::TripleO::CephStorage::Net::SoftwareConfig: OS::Heat::None
-  OS::TripleO::ComputeDell::Net::SoftwareConfig: OS::Heat::None
 parameter_defaults:
   ControllerNetworkConfigTemplate: '~/templates/nic-configs/multiple_nics_dvr.j2'
   ComputeNetworkConfigTemplate: '~/templates/nic-configs/multiple_nics_dvr.j2'
   BlockStorageNetworkConfigTemplate: '~/templates/nic-configs/multiple_nics.j2'
   ObjectStorageNetworkConfigTemplate: '~/templates/nic-configs/multiple_nics.j2'
   CephStorageNetworkConfigTemplate: '~/templates/nic-configs/multiple_nics.j2'
-  ComputeDellNetworkConfigTemplate: '~/templates/nic-configs/bonds_vlans/bonds_vlans.j2'

@@ -13,6 +13,9 @@ deploy(){
 		-e /home/stack/templates/storage_custom.yaml \
 		-e /home/stack/templates/kernel_args.yaml \
 		-e /home/stack/templates/overcommit.yaml \
+		-e /home/stack/templates/enable-tls.yaml \
+		-e /home/stack/templates/tls-endpoints-public-ip.yaml \
+		-e /home/stack/templates/inject-trust-anchor.yaml \
 		-e /home/stack/containers-prepare-parameter.yaml 
 
 }

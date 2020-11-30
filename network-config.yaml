@@ -6,6 +6,8 @@ parameter_defaults:
   TenantMtu: 9000
   ExternalMtu: 9000
   PublicVirtualFixedIPs: [{'ip_address':'172.20.10.25'}]
+  CloudName: overcloud.bne-home.net
+  CloudDomain: bne-home.net
   NetworkDeploymentActions: ['CREATE']
   # NetworkDeploymentActions: ['CREATE','UPDATE']
   NeutronEnableDVR: false
