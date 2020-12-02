@@ -10,3 +10,9 @@ parameter_defaults:
   NetworkDeploymentActions: ['CREATE']
   # NetworkDeploymentActions: ['CREATE','UPDATE']
   NeutronEnableDVR: true
+  ExtraFirewallRules:
+    '301 allow Prometheus':
+      dport: 9100
+      proto: tcp
+      source: 172.20.0.0/16
+      action: accept
