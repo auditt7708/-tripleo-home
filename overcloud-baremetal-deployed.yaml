@@ -4,6 +4,7 @@ parameter_defaults:
   ControllerCount: 1
   ComputeDellCount: 1
   ControllerHostnameFormat: '%stackname%-controller-%index%'
+  ComputeMaxFailPercentage: 100
   DeployedServerPortMap:
     overcloud-controller-0-ctlplane:
       fixed_ips:

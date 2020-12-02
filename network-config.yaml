@@ -1,13 +1,12 @@
 parameter_defaults:
-  DnsServers: ['8.8.8.8']
+  DnsServers: ['192.168.1.221']
   StorageMtu: 9000
   StorageMgmtMtu: 9000
   InternalApiMtu: 9000
   TenantMtu: 9000
   ExternalMtu: 9000
   PublicVirtualFixedIPs: [{'ip_address':'172.20.10.25'}]
-  CloudName: overcloud.bne-home.net
   CloudDomain: bne-home.net
   NetworkDeploymentActions: ['CREATE']
   # NetworkDeploymentActions: ['CREATE','UPDATE']
-  NeutronEnableDVR: false
+  NeutronEnableDVR: true

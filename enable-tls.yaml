@@ -17,29 +17,30 @@ parameter_defaults:
   # The content of the SSL certificate (without Key) in PEM format.
   # Type: string
   SSLCertificate: |
-   -----BEGIN CERTIFICATE-----
-   MIIDlDCCAnwCAQEwDQYJKoZIhvcNAQELBQAwgZQxCzAJBgNVBAYTAkFVMRMwEQYD
-   VQQIDApRdWVlbnNsYW5kMREwDwYDVQQHDAhCcmlzYmFuZTERMA8GA1UECgwIYm5l
-   LWhvbWUxHzAdBgNVBAMMFm92ZXJjbG91ZC5ibmUtaG9tZS5uZXQxKTAnBgkqhkiG
-   9w0BCQEWGmJyZW5kYW4uc2hlcGhhcmRAZ21haWwuY29tMB4XDTIwMTEyOTIzMTIx
-   MFoXDTIxMTEyOTIzMTIxMFowgYoxCzAJBgNVBAYTAkFVMRMwEQYDVQQIDApRdWVl
-   bnNsYW5kMREwDwYDVQQHDAhCcmlzYmFuZTERMA8GA1UECgwIYm5lLWhvbWUxFTAT
-   BgNVBAMMDDE3Mi4yMC4xMC4yNTEpMCcGCSqGSIb3DQEJARYaYnJlbmRhbi5zaGVw
-   aGFyZEBnbWFpbC5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDa
-   G0E9SHnWbUJyTBJFLaC8dsAyR5LGBJaFziicLNU+5wms+IGtiRVaGd3B+SRwmjyu
-   ocXsYFvaZubcENOBVwkRZlmcUQtfL9Sr2V0qCPCm4ROCTx2nVidpEkvpbTo2QKQA
-   1Sa4fNOIsvSZP6AFigHVEV++FUmcWpT6k4rJVqoeVV93qOmHDOusDKbg7TQni7pE
-   eO1a0zEV/HGZZBjQB1Y2vbOuW5tioePvN3h1G1ruxRhFJ1ht1qVMavDVDqNtAiD1
-   WOKHSEjkzh/FDRua/mMyrmpQLiv65vuenwlpRUIQQECnpdjAmVwF8mxBQvLQ18oS
-   dls4IzmjQKnZyDxp2+8bAgMBAAEwDQYJKoZIhvcNAQELBQADggEBAA8iFn7ihsUv
-   2ZQv3TuAhS+ZxwLX1/nmywbkWuPELoaM3Mm85OFQeDyP5AegX06/GKgyjG3DWyYd
-   qfmkckPGixD808kAF1v/gu5USxVZyrPT8XjZpRdUYS6TMzk2gqRJLN2Jbrh6k+Et
-   bn819jV+8U6TnKISnPkS4CCxw4UdmGbC22KGDniIr5wWPUt+ey+T5b6clMZsGWzt
-   h84S7Oxy/krr0dZY99SmN25I4J8R9POJIOzicqmzbvQ1rDhQrQCPe1l7ZYNp3pnn
-   3alfF/O2AZu5S/5jirgJioDnz2aR7ufFUJO3CW45hCOSblaaReNPZi0w8wUqGq5N
-   eFrGl8HChL0=
-   -----END CERTIFICATE-----
-
+          -----BEGIN CERTIFICATE-----
+          MIIEGjCCAwKgAwIBAgIUdm5qzm1qGel0CdzUCT0dprGIoHwwDQYJKoZIhvcNAQEL
+          BQAwgYgxCzAJBgNVBAYTAkFVMRMwEQYDVQQIDApRdWVlbnNsYW5kMREwDwYDVQQH
+          DAhCcmlzYmFuZTERMA8GA1UECgwIYm5lLWhvbWUxEzARBgNVBAMMCnRyaXBsZW9f
+          Y2ExKTAnBgkqhkiG9w0BCQEWGmJyZW5kYW4uc2hlcGhhcmRAZ21haWwuY29tMB4X
+          DTIwMTIwMTA5NDcxOVoXDTIyMDQxNTA5NDcxOVowgaQxCzAJBgNVBAYTAkFVMRMw
+          EQYDVQQIDApRdWVlbnNsYW5kMREwDwYDVQQHDAhCcmlzYmFuZTERMA8GA1UECgwI
+          Ym5lLWhvbWUxDjAMBgNVBAsMBWFkbWluMSkwJwYJKoZIhvcNAQkBFhpicmVuZGFu
+          LnNoZXBoYXJkQGdtYWlsLmNvbTEfMB0GA1UEAwwWb3BlbnN0YWNrLmJuZS1ob21l
+          Lm5ldDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBANleCHec3HmL2ExG
+          WIhX0BGREBA8dxCQeu7ck/YA8ZgxA5yMDpiCbTcCLVfJvMtkSJX0ik/1zpy2ceqD
+          Q80r6QXK9ozv79eH1V4aVyGNCKr6t/CWNQVx+oqIv+g02lx2/gPj7zQQfzDcJWL3
+          FNHGw13I+jTlEbt9G4QiT4Pv1zw7/FoEuPn4YzAT0shE9DEPihYqK9OVujJqJUVR
+          Hr6lOvI24W7iifGl6+KoAQOJm1Bckoh4zpXXD4uPiEDaYql2s5qccRnzXABh1a5M
+          fuqprGRXCfzXVPbmtWNftGUF1TsimSSdcK2UOYPPK/1rz10WSKZ5qQMWn+VZ5Zl8
+          0hS+j4cCAwEAAaNeMFwwHwYDVR0jBBgwFoAUk5GYNjh/2/v8rkNCUiPI4dWus4Iw
+          CQYDVR0TBAIwADALBgNVHQ8EBAMCBPAwIQYDVR0RBBowGIIWb3BlbnN0YWNrLmJu
+          ZS1ob21lLm5ldDANBgkqhkiG9w0BAQsFAAOCAQEAWN0Jzs/DYA5cg11/8tt5mt9V
+          5XqXZI7J3WdJSeHvqrLH7eyPu7sVypjbX4qzs5p4RzpZ3AyqCwMYCqkI80CfWkut
+          KQhGOmhLi+qxW6P98hnGb0IP2z1g1Ic3KYG/h+0N/XPZ/QqSayEPirk+G1+wSu0t
+          VCV5ZZDoWpquzYusihzBkOhNUuVcOPK553PtbkgZIAJ92ld6XGQhzs5565S24xX+
+          amWNFaV0aFXKVEZGmZmqicm5aCt6Yz91MlnBP64qhuwLsPgpVR+OkZI0el2aREqD
+          xLnBsA9B8uSmyeAEGCnxsCQhApRh/taYyMMuPO4MK7DMJQC5DazCqlPuBUCUSQ==
+          -----END CERTIFICATE-----
   # The content of an SSL intermediate CA certificate in PEM format.
   # Type: string
   SSLIntermediateCertificate: ''
@@ -47,33 +48,34 @@ parameter_defaults:
   # The content of the SSL Key in PEM format.
   # Type: string
   SSLKey: |
-   -----BEGIN RSA PRIVATE KEY-----
-   MIIEowIBAAKCAQEA2htBPUh51m1CckwSRS2gvHbAMkeSxgSWhc4onCzVPucJrPiB
-   rYkVWhndwfkkcJo8rqHF7GBb2mbm3BDTgVcJEWZZnFELXy/Uq9ldKgjwpuETgk8d
-   p1YnaRJL6W06NkCkANUmuHzTiLL0mT+gBYoB1RFfvhVJnFqU+pOKyVaqHlVfd6jp
-   hwzrrAym4O00J4u6RHjtWtMxFfxxmWQY0AdWNr2zrlubYqHj7zd4dRta7sUYRSdY
-   bdalTGrw1Q6jbQIg9Vjih0hI5M4fxQ0bmv5jMq5qUC4r+ub7np8JaUVCEEBAp6XY
-   wJlcBfJsQULy0NfKEnZbOCM5o0Cp2cg8advvGwIDAQABAoIBAHwwyrwfeai8O/qj
-   EEAt0/mcUKIQmSWB1UfJdNxAtwgDPEIumoB6rxrH4bqip7oqSOVTHkUTNRouP8QN
-   HLHoIjSzJ9FXYHdJ3/oeYesefhE31gj8DbGL4BL3JRx8Yooj0n7a4BpqkXSkGZzt
-   WqvswlBVfUPaETkjZvMrcfplC6cK/hv8npbO2wi8AHhoYXMZAD0FfdunOKX6k+2C
-   3Ro3Lcg4ogNWqfAJKtT0gY5LH8zu9QIIKX9Qqq2TvYUja/GlgShgs6XAAwabg5yM
-   S8bR3dHywyIL5m4jO1k1G9dmaImC/Mq3Y8s01TrBgUg4F1d6o36watvXNNFp391h
-   4ZfOLRECgYEA+3I6H7JUZxZNyf6rsyCyxmdOsejo6OB/Xr6oKGD7GMqBRXEpbpxW
-   fgTLHy87tsTlR7yZsT2FLUwhUe15XkluLemnlYmBRnvbXDrdSdR3B7TxEqRbZEWO
-   1tfzT8iPXEjoSuoNdYZ/sxdZK8Ysn3Das9amszfSg7zM9WIsI31SmeMCgYEA3g50
-   qeFcaGgCPCJUpREQ5Q9AszOXGAkfWds3PT1KDMLULOc6FS9CyF1j2/XG2RpYNeRh
-   zmeoa88Y9EXpFHO6kQWaC3CFwdvN0gjr9qllanYWKQKCBq1o0TywiKLQnIUOqf/y
-   AUmWDUj4GZexAt/FzRaqAQfJGD4zwneOfm3Gu2kCgYEAm4ZTnTdYLUsGYmI7IVig
-   O0e6zSAar6/sGFYk/JS/ut3Gh4Uu81OPy/J7EJbOgIXYqz5kcdRzg0kLcvlHkKIq
-   nAthtISQiWAiljFyni/kT8gDNFykiqjbaNe5jyemRJZz16JdIMxIQCW46fJxt0y+
-   eW3TPhbRBtrIix5l3q2tYbECgYBzJmnnIl9qIO1vw5nDU3tAXU1+4DTtGOXyEdSu
-   ZBb/URT4CBw9mhl2j79V9DjeomO15q21fFmBNo7JNWut2GmaBJ6iagJiyhoMXeYH
-   LkbSE1RghdVpowkk3+Tnpg6p6/HzxC757e/rCbjmhJwdUm9fb+5OxHvKn471vEvf
-   UgvpaQKBgFA5NbvroEzmflwQZJr6anJDCsuppbvFJKCoMFVN0egAm6Ct6Ycb4KMA
-   qIbxpOpp83k4Aj+KXna7U+ZGjhP1++/eIF4ZW4Eed6f9KhO3X3BDG1Yi7Y9gtjlo
-   1wnHOMKTGV085WpdzvaFZda6BokpfAv6ekVaHzHIvfmJDbFZXWwk
-   -----END RSA PRIVATE KEY-----
+          -----BEGIN PRIVATE KEY-----
+          MIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDZXgh3nNx5i9hM
+          RliIV9ARkRAQPHcQkHru3JP2APGYMQOcjA6Ygm03Ai1XybzLZEiV9IpP9c6ctnHq
+          g0PNK+kFyvaM7+/Xh9VeGlchjQiq+rfwljUFcfqKiL/oNNpcdv4D4+80EH8w3CVi
+          9xTRxsNdyPo05RG7fRuEIk+D79c8O/xaBLj5+GMwE9LIRPQxD4oWKivTlboyaiVF
+          UR6+pTryNuFu4onxpeviqAEDiZtQXJKIeM6V1w+Lj4hA2mKpdrOanHEZ81wAYdWu
+          TH7qqaxkVwn811T25rVjX7RlBdU7IpkknXCtlDmDzyv9a89dFkimeakDFp/lWeWZ
+          fNIUvo+HAgMBAAECggEAbf+tD0LdO9EuM2NB+DVgARPE6kJ/Cm3jGC+d3Ncba6Ya
+          KsWhuUH/nN/ILG3V0aO9K82llNNSrHGTclbdH94BvUG5xRbC6/I8YrO3ti3V3hik
+          ruaEjG3imOqdGxhsDHDXGQbnDRTwGLy/Wrao3YPVaAeFvvDRKW0lWJe4X48m/754
+          rgEJC31gVWbE13MS6LWvjn+dz5wx7HKiJomKug8nRx5ZB28AGHUD4XX0BqdDYIjw
+          II2a8avlGYZKOct8Zy4JFHm/tAZ2u7u7MCyAYxQfqcuEDcUgCITSUwFDGgLI8zUJ
+          MvptZfAN/YFzmnCt2GtHA8K91cHdseQsBK3ak64rcQKBgQDvUSebM1J+HJsP7qAI
+          ZmvPH2R+QR7txTC+sFph2V6hvC2vpdj/ATWvVqoviu423Y4oitYCwpSIgftBcvgS
+          bh3aDR5TDE4X32sHTvvi4B2To8krYrRHmPh7b06xJmn0c5uqSt5XJNdKtqYSvqJi
+          1E6e7UtTWRTPAI+XYoO34tOtKQKBgQDohSoouaNnKHV2l7mLHO1SL2HA4CPekatA
+          RXH8HAMR+utMN37j64syQPbaGp5TSm0GuIuetp+qnmH5UgkDzRIAxNbMpJi/cB5f
+          zm6X7ClRoktdLP05FwhpDlJoNOwl5S0A9Y2aTKJxG+INYcxFIsfGgdR/HHVvY7D6
+          8Yq0F4c9LwKBgFVjx5YBAfYtjsZohoF4yg7lTJ4f7kE4kuP3WMiBHtrmogaCTqLu
+          c5FUgvTjxYueEhM1NpdVhloOxu/bbdhlohEjjSZkxZiPB0lcTVPuU59SWX05gsnp
+          MwAX/yQGaNfoSCrC/AJsCsWF1kvp6VcKGeNrF+1tY5dYw+NoK0d5j73BAoGAIGvA
+          7yDDSfT4O+r38g+8f4MfzDb0iWoiSLnmJNL7Epy8BkqOpNUI+Z7ZTJv9i3uLLC67
+          OQwZwz6GRq9Lln4Xjofjs3EX40mM0qsD/KbvM/S/MWS+giFWCN/4WZNXggksdz/F
+          2Mfqtn6+zELgqpso4+LicD7VmQx7duILBwVo0/0CgYA6+Yq6WUNqK10yzRcZ7IKU
+          pu6WPOVYHOFabjmRxgW+Ezm89iwURy52dUARGDJNBeYS8Fe4+MsdOYvt4CVKILBW
+          ZC78xq3m8WqXWSwEcNg4Z8L78YaNSRlHPAtSEvQhaoZ7PgYAVOme7ojgEXVygNZ+
+          huA3FcGMOmJN545Lwr6X/A==
+          -----END PRIVATE KEY-----
   # ******************************************************
   # Static parameters - these are values that must be
   # included in the environment but should not be changed.
