@@ -15,4 +15,4 @@ parameter_defaults:
       dport: 9100
       proto: tcp
       source: 172.20.0.0/16
-      action: accept
+      action: insert
