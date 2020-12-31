@@ -48,6 +48,7 @@ network_config:
   - type: vlan
     name: nic{{nics_used[-1] + 1}}
     mtu: {{ lookup('vars', networks_lower['External'] ~ '_mtu') }}
+    vlan_id: {{ lookup('vars', networks_lower['External'] ~ '_vlan_id') }}
     primary: true
     defroute: true
     addresses:
