@@ -15,7 +15,7 @@ deploy(){
 		-e /home/stack/templates/octavia-config.yaml \
 		-e /home/stack/templates/storage_custom.yaml \
 		-e /home/stack/templates/kernel_args.yaml \
-		-e /home/stack/templates/overcommit.yaml \
+		-e /home/stack/templates/compute_overcommit.yaml \
 		-e /home/stack/templates/enable-tls.yaml \
 		-e /home/stack/templates/tls-endpoints-public-dns.yaml \
 		-e /home/stack/templates/cloudname.yaml \
