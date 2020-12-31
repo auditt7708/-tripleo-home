@@ -9,6 +9,7 @@ parameter_defaults:
   CloudDomain: bne-home.net
   NetworkDeploymentActions: ['CREATE']
   # NetworkDeploymentActions: ['CREATE','UPDATE']
+  ComputeNetworkDeploymentActions: ['CREATE','UPDATE']
   NeutronEnableDVR: false
   BondInterfaceOvsOptions: bond_mode=balance-slb
   ExtraFirewallRules:
