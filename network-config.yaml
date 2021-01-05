@@ -1,5 +1,5 @@
 parameter_defaults:
-  DnsServers: ['192.168.1.221', '172.20.10.22']
+  DnsServers: ['192.168.1.221','172.20.10.22']
   StorageMtu: 9000
   StorageMgmtMtu: 9000
   InternalApiMtu: 9000
@@ -9,7 +9,7 @@ parameter_defaults:
   CloudDomain: bne-home.net
   NetworkDeploymentActions: ['CREATE']
   # NetworkDeploymentActions: ['CREATE','UPDATE']
-  ComputeNetworkDeploymentActions: ['CREATE','UPDATE']
+  # ComputeNetworkDeploymentActions: ['CREATE','UPDATE']
   NeutronEnableDVR: false
   BondInterfaceOvsOptions: bond_mode=balance-slb
   ExtraFirewallRules:
