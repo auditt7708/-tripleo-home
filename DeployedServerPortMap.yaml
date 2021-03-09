@@ -1,0 +1,41 @@
+  DeployedServerPortMap:
+    overcloud-controller-0-ctlplane:
+      fixed_ips:
+      - ip_address: 192.168.24.10
+      network:
+        mtu: 1500
+        tags:
+        - 192.168.24.0/24
+      subnets:
+      - cidr: 192.168.24.0/24
+        dns_nameservers: []
+        gateway_ip: 192.168.24.1
+        host_routes: []
+    overcloud-dellcompute-0-ctlplane:
+      fixed_ips:
+      - ip_address: 192.168.24.90
+      network:
+        mtu: 1500
+        tags:
+        - 192.168.24.0/24
+      subnets:
+      - cidr: 192.168.24.0/24
+        dns_nameservers: []
+        gateway_ip: 192.168.24.1
+        host_routes: []
+    overcloud-novacompute-0-ctlplane:
+      fixed_ips:
+      - ip_address: 192.168.24.20
+    overcloud-novacompute-1-ctlplane:
+      fixed_ips:
+      - ip_address: 192.168.24.17
+  DesignatePassword: jarMBxxhb9Qfu1N7oo9DsTRG3
+  DesignateRndcKey: W9CDqqz+FMYcbskDA0fSeWyx1OsA0MlWRezEJsQvE8Q=
+  DnfStreams:
+  - module: container-tools
+    stream: '2.0'
+  DnsServers:
+  - 192.168.1.221
+  DockerInsecureRegistryAddress:
+  - tripleo-director.ctlplane.localdomain:8787
+  Ec2ApiPassword: gofeSWJwNF5w2UFurevDxdhT5

@@ -1,0 +1,13 @@
+    overcloud-novacompute-0-ctlplane: 
+      fixed_ips: 
+      - ip_address: 192.168.24.6 
+      network: 
+        mtu: 1500 
+        tags: 
+        - 192.168.24.0/24 
+      subnets: 
+      - cidr: 192.168.24.0/24 
+        dns_nameservers: [] 
+        gateway_ip: 192.168.24.1 
+        host_routes: [] 
+

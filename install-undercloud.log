@@ -1,0 +1,277 @@
+2021-03-05 20:03:18.388 310614 WARNING tripleoclient.v1.undercloud.UpgradeUndercloud [  ] Updating necessary packages: python3-tripleoclient openstack-tripleo-common openstack-tripleo-heat-templates openstack-tripleo-validations tripleo-ansible
+2021-03-05 20:03:21.768 310614 WARNING tripleoclient.v1.undercloud.UpgradeUndercloud [  ] Last metadata expiration check: 0:55:22 ago on Fri 05 Mar 2021 19:07:58 AEST.
+Dependencies resolved.
+Nothing to do.
+Complete!
+
+2021-03-05 20:03:25.844 310683 INFO tripleoclient.v1.undercloud_preflight.UndercloudSetup [  ] Checking Hostname...
+2021-03-05 20:03:26.524 310683 INFO tripleoclient.v1.undercloud_preflight.UndercloudSetup [  ] Checking Memory...
+2021-03-05 20:03:26.526 310683 INFO tripleoclient.v1.undercloud_preflight.UndercloudSetup [  ] Checking Disk space...
+2021-03-05 20:04:30.655 310683 INFO tripleoclient.v1.undercloud_preflight.UndercloudSetup [  ] Checking Sysctl...
+2021-03-05 20:04:30.656 310683 INFO tripleoclient.v1.undercloud_preflight.UndercloudSetup [  ] Checking Password file...
+2021-03-05 20:04:30.656 310683 INFO tripleoclient.v1.undercloud_preflight.UndercloudSetup [  ] Checking Deprecated now invalid options...
+2021-03-05 20:04:30.657 310683 INFO tripleoclient.v1.undercloud_preflight.UndercloudSetup [  ] Checking Networking values...
+2021-03-05 20:04:30.658 310683 INFO tripleoclient.v1.undercloud_preflight.UndercloudSetup [  ] Checking Subnet "ctlplane-subnet" is in CIDR...
+2021-03-05 20:04:30.660 310683 INFO tripleoclient.v1.undercloud_preflight.UndercloudSetup [  ] Checking DHCP range is in subnet "ctlplane-subnet"...
+2021-03-05 20:04:30.661 310683 INFO tripleoclient.v1.undercloud_preflight.UndercloudSetup [  ] Checking Inspection range for subnet "ctlplane-subnet"...
+2021-03-05 20:04:30.661 310683 INFO tripleoclient.v1.undercloud_preflight.UndercloudSetup [  ] Checking IP addresses...
+2021-03-05 20:04:30.661 310683 INFO tripleoclient.v1.undercloud_preflight.UndercloudSetup [  ] Checking Network interfaces...
+2021-03-05 20:04:30.663 310683 INFO tripleoclient.v1.undercloud_preflight.UndercloudSetup [  ] Checking Provisioning IP change...
+2021-03-05 20:04:30.663 310683 INFO tripleoclient.v1.undercloud_preflight.UndercloudSetup [  ] Checking Architecture...
+2021-03-05 20:04:30.664 310683 WARNING tripleoclient.v1.undercloud.UpgradeUndercloud [  ] Running: sudo --preserve-env openstack tripleo deploy --standalone --standalone-role Undercloud --stack undercloud --local-domain=localdomain --local-ip=192.168.24.1/24 --templates=/usr/share/openstack-tripleo-heat-templates/ --networks-file=/usr/share/openstack-tripleo-heat-templates/network_data_undercloud.yaml -y --upgrade -e /usr/share/openstack-tripleo-heat-templates/environments/lifecycle/undercloud-upgrade-prepare.yaml --heat-native -e /usr/share/openstack-tripleo-heat-templates/environments/undercloud.yaml -e /usr/share/openstack-tripleo-heat-templates/environments/use-dns-for-vips.yaml -e /usr/share/openstack-tripleo-heat-templates/environments/podman.yaml -e /home/stack/containers-prepare-parameter.yaml -e /usr/share/openstack-tripleo-heat-templates/environments/services/ironic.yaml -e /usr/share/openstack-tripleo-heat-templates/environments/services/ironic-inspector.yaml -e /usr/share/openstack-tripleo-heat-templates/environments/services/undercloud-remove-novajoin.yaml -e /usr/share/openstack-tripleo-heat-templates/environments/disable-telemetry.yaml -e /usr/share/openstack-tripleo-heat-templates/environments/services/tempest.yaml -e /usr/share/openstack-tripleo-heat-templates/environments/public-tls-undercloud.yaml --public-virtual-ip 192.168.24.2 --control-virtual-ip 192.168.24.3 -e /usr/share/openstack-tripleo-heat-templates/environments/ssl/tls-endpoints-public-ip.yaml -e /usr/share/openstack-tripleo-heat-templates/environments/services/undercloud-haproxy.yaml -e /usr/share/openstack-tripleo-heat-templates/environments/services/undercloud-keepalived.yaml --deployment-user stack --output-dir=/home/stack --cleanup -e /home/stack/tripleo-config-generated-env-files/undercloud_parameters.yaml -e /usr/share/openstack-tripleo-heat-templates/environments/tripleo-validations.yaml --log-file=install-undercloud.log -e /usr/share/openstack-tripleo-heat-templates/undercloud-stack-vstate-dropin.yaml
+2021-03-05 20:04:35.180 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] The heat stack undercloud action is UPDATE
+2021-03-05 20:04:42.083 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] ** Handling template files **
+2021-03-05 20:04:43.481 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering normal template overcloud-resource-registry-puppet.j2.yaml
+2021-03-05 20:04:43.482 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./overcloud-resource-registry-puppet.yaml
+2021-03-05 20:04:43.482 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering normal template overcloud.j2.yaml
+2021-03-05 20:04:43.483 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./overcloud.yaml
+2021-03-05 20:04:43.483 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering normal template deploy-steps-tasks-step-0.j2.yaml
+2021-03-05 20:04:43.483 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./common/deploy-steps-tasks-step-0.yaml
+2021-03-05 20:04:43.483 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering normal template post.j2.yaml
+2021-03-05 20:04:43.483 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./common/post.yaml
+2021-03-05 20:04:43.483 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering role template role.role.j2.yaml
+2021-03-05 20:04:43.483 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering roles Undercloud
+2021-03-05 20:04:43.484 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./common/services/undercloud-role.yaml
+2021-03-05 20:04:43.484 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering normal template apache-baremetal-puppet.j2.yaml
+2021-03-05 20:04:43.484 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./deployment/apache/apache-baremetal-puppet.yaml
+2021-03-05 20:04:43.484 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering normal template container-image-prepare-baremetal-ansible.j2.yaml
+2021-03-05 20:04:43.484 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./deployment/container-image-prepare/container-image-prepare-baremetal-ansible.yaml
+2021-03-05 20:04:43.484 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering normal template haproxy-internal-tls-certmonger.j2.yaml
+2021-03-05 20:04:43.485 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./deployment/haproxy/haproxy-internal-tls-certmonger.yaml
+2021-03-05 20:04:43.485 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering normal template octavia-deployment-config.j2.yaml
+2021-03-05 20:04:43.485 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./deployment/octavia/octavia-deployment-config.yaml
+2021-03-05 20:04:43.485 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering normal template net-noop.j2.yaml
+2021-03-05 20:04:43.485 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./environments/net-noop.yaml
+2021-03-05 20:04:43.486 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering normal template deployed-server-environment.j2.yaml
+2021-03-05 20:04:43.486 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./environments/deployed-server-environment.yaml
+2021-03-05 20:04:43.486 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering normal template net-multiple-nics.j2.yaml
+2021-03-05 20:04:43.486 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./environments/net-multiple-nics.yaml
+2021-03-05 20:04:43.487 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering normal template net-bond-with-vlans.j2.yaml
+2021-03-05 20:04:43.487 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./environments/net-bond-with-vlans.yaml
+2021-03-05 20:04:43.487 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering normal template net-2-linux-bonds-with-vlans.j2.yaml
+2021-03-05 20:04:43.487 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./environments/net-2-linux-bonds-with-vlans.yaml
+2021-03-05 20:04:43.487 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering normal template net-bond-with-vlans-no-external.j2.yaml
+2021-03-05 20:04:43.487 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./environments/net-bond-with-vlans-no-external.yaml
+2021-03-05 20:04:43.487 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering normal template net-dpdkbond-with-vlans.j2.yaml
+2021-03-05 20:04:43.488 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./environments/net-dpdkbond-with-vlans.yaml
+2021-03-05 20:04:43.488 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering normal template net-multiple-nics-vlans.j2.yaml
+2021-03-05 20:04:43.488 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./environments/net-multiple-nics-vlans.yaml
+2021-03-05 20:04:43.488 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering normal template net-single-nic-linux-bridge-with-vlans.j2.yaml
+2021-03-05 20:04:43.488 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./environments/net-single-nic-linux-bridge-with-vlans.yaml
+2021-03-05 20:04:43.489 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering normal template net-single-nic-with-vlans-no-external.j2.yaml
+2021-03-05 20:04:43.489 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./environments/net-single-nic-with-vlans-no-external.yaml
+2021-03-05 20:04:43.489 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering normal template net-single-nic-with-vlans.j2.yaml
+2021-03-05 20:04:43.489 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./environments/net-single-nic-with-vlans.yaml
+2021-03-05 20:04:43.489 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering normal template network-environment-v6-all.j2.yaml
+2021-03-05 20:04:43.489 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./environments/network-environment-v6-all.yaml
+2021-03-05 20:04:43.490 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering normal template network-environment-v6.j2.yaml
+2021-03-05 20:04:43.490 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./environments/network-environment-v6.yaml
+2021-03-05 20:04:43.490 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering normal template network-environment.j2.yaml
+2021-03-05 20:04:43.490 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./environments/network-environment.yaml
+2021-03-05 20:04:43.490 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering normal template network-isolation-no-tunneling.j2.yaml
+2021-03-05 20:04:43.490 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./environments/network-isolation-no-tunneling.yaml
+2021-03-05 20:04:43.490 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering normal template network-isolation-v6-all.j2.yaml
+2021-03-05 20:04:43.490 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./environments/network-isolation-v6-all.yaml
+2021-03-05 20:04:43.491 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering normal template network-isolation-v6.j2.yaml
+2021-03-05 20:04:43.491 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./environments/network-isolation-v6.yaml
+2021-03-05 20:04:43.495 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering normal template network-isolation.j2.yaml
+2021-03-05 20:04:43.495 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./environments/network-isolation.yaml
+2021-03-05 20:04:43.495 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering normal template networks-disable.j2.yaml
+2021-03-05 20:04:43.495 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./environments/networks-disable.yaml
+2021-03-05 20:04:43.496 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering normal template overcloud-baremetal.j2.yaml
+2021-03-05 20:04:43.496 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./environments/overcloud-baremetal.yaml
+2021-03-05 20:04:43.496 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering normal template split-stack-consistent-hostname-format.j2.yaml
+2021-03-05 20:04:43.496 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./environments/split-stack-consistent-hostname-format.yaml
+2021-03-05 20:04:43.496 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering normal template enable-internal-tls.j2.yaml
+2021-03-05 20:04:43.497 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./environments/ssl/enable-internal-tls.yaml
+2021-03-05 20:04:43.497 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering normal template swap-partition.j2.yaml
+2021-03-05 20:04:43.497 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./extraconfig/all_nodes/swap-partition.yaml
+2021-03-05 20:04:43.497 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering normal template swap.j2.yaml
+2021-03-05 20:04:43.497 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./extraconfig/all_nodes/swap.yaml
+2021-03-05 20:04:43.497 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering role template role.role.j2.yaml
+2021-03-05 20:04:43.498 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering roles Undercloud
+2021-03-05 20:04:43.498 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./extraconfig/nova_metadata/krb-service-principals/undercloud-role.yaml
+2021-03-05 20:04:43.498 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering network template network.network.j2.yaml
+2021-03-05 20:04:43.498 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering networks External
+2021-03-05 20:04:43.498 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./network/external.yaml
+2021-03-05 20:04:43.499 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering network template network_v6.network.j2.yaml
+2021-03-05 20:04:43.499 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering networks External
+2021-03-05 20:04:43.499 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./network/external_v6.yaml
+2021-03-05 20:04:43.499 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering normal template networks.j2.yaml
+2021-03-05 20:04:43.499 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./network/networks.yaml
+2021-03-05 20:04:43.500 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering normal template service_net_map.j2.yaml
+2021-03-05 20:04:43.500 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./network/service_net_map.yaml
+2021-03-05 20:04:43.500 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering network template external_resource_port.network.j2.yaml
+2021-03-05 20:04:43.500 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering networks External
+2021-03-05 20:04:43.500 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./network/ports/external_resource_external.yaml
+2021-03-05 20:04:43.501 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering network template external_resource_port_v6.network.j2.yaml
+2021-03-05 20:04:43.501 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering networks External
+2021-03-05 20:04:43.501 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./network/ports/external_resource_external_v6.yaml
+2021-03-05 20:04:43.501 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering normal template net_ip_list_map.j2.yaml
+2021-03-05 20:04:43.501 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./network/ports/net_ip_list_map.yaml
+2021-03-05 20:04:43.501 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering normal template net_ip_map.j2.yaml
+2021-03-05 20:04:43.502 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./network/ports/net_ip_map.yaml
+2021-03-05 20:04:43.502 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering normal template net_vip_map_external.j2.yaml
+2021-03-05 20:04:43.502 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./network/ports/net_vip_map_external.yaml
+2021-03-05 20:04:43.502 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering normal template net_vip_map_external_v6.j2.yaml
+2021-03-05 20:04:43.657 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./network/ports/net_vip_map_external_v6.yaml
+2021-03-05 20:04:43.657 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering network template port.network.j2.yaml
+2021-03-05 20:04:43.657 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering networks External
+2021-03-05 20:04:43.657 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./network/ports/external.yaml
+2021-03-05 20:04:43.657 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering network template port_from_pool.network.j2.yaml
+2021-03-05 20:04:43.658 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering networks External
+2021-03-05 20:04:43.658 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./network/ports/external_from_pool.yaml
+2021-03-05 20:04:43.658 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering network template port_from_pool_v6.network.j2.yaml
+2021-03-05 20:04:43.658 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering networks External
+2021-03-05 20:04:43.658 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./network/ports/external_from_pool_v6.yaml
+2021-03-05 20:04:43.659 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering network template port_v6.network.j2.yaml
+2021-03-05 20:04:43.659 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering networks External
+2021-03-05 20:04:43.659 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./network/ports/external_v6.yaml
+2021-03-05 20:04:43.659 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering network template deployed_port.network.j2.yaml
+2021-03-05 20:04:43.660 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering networks External
+2021-03-05 20:04:43.660 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./network/ports/deployed_external.yaml
+2021-03-05 20:04:43.660 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering role template role.role.j2.yaml
+2021-03-05 20:04:43.660 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering roles Undercloud
+2021-03-05 20:04:43.660 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./puppet/undercloud-role.yaml
+2021-03-05 20:04:43.930 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] /etc/keystone file is Absent.
+2021-03-05 20:04:48.144 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] ** Handling template files **
+2021-03-05 20:04:49.415 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering normal template overcloud-resource-registry-puppet.j2.yaml
+2021-03-05 20:04:49.416 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./overcloud-resource-registry-puppet.yaml
+2021-03-05 20:04:49.416 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering normal template overcloud.j2.yaml
+2021-03-05 20:04:49.416 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./overcloud.yaml
+2021-03-05 20:04:49.417 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering normal template deploy-steps-tasks-step-0.j2.yaml
+2021-03-05 20:04:49.417 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./common/deploy-steps-tasks-step-0.yaml
+2021-03-05 20:04:49.417 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering normal template post.j2.yaml
+2021-03-05 20:04:49.417 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./common/post.yaml
+2021-03-05 20:04:49.417 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering role template role.role.j2.yaml
+2021-03-05 20:04:49.417 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering roles Undercloud
+2021-03-05 20:04:49.417 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./common/services/undercloud-role.yaml
+2021-03-05 20:04:49.418 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering normal template apache-baremetal-puppet.j2.yaml
+2021-03-05 20:04:49.418 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./deployment/apache/apache-baremetal-puppet.yaml
+2021-03-05 20:04:49.418 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering normal template container-image-prepare-baremetal-ansible.j2.yaml
+2021-03-05 20:04:49.418 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./deployment/container-image-prepare/container-image-prepare-baremetal-ansible.yaml
+2021-03-05 20:04:49.418 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering normal template haproxy-internal-tls-certmonger.j2.yaml
+2021-03-05 20:04:49.419 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./deployment/haproxy/haproxy-internal-tls-certmonger.yaml
+2021-03-05 20:04:49.419 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering normal template octavia-deployment-config.j2.yaml
+2021-03-05 20:04:49.419 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./deployment/octavia/octavia-deployment-config.yaml
+2021-03-05 20:04:49.419 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering normal template net-noop.j2.yaml
+2021-03-05 20:04:49.419 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./environments/net-noop.yaml
+2021-03-05 20:04:49.419 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering normal template deployed-server-environment.j2.yaml
+2021-03-05 20:04:49.419 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./environments/deployed-server-environment.yaml
+2021-03-05 20:04:49.420 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering normal template net-multiple-nics.j2.yaml
+2021-03-05 20:04:49.420 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./environments/net-multiple-nics.yaml
+2021-03-05 20:04:49.420 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering normal template net-bond-with-vlans.j2.yaml
+2021-03-05 20:04:49.420 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./environments/net-bond-with-vlans.yaml
+2021-03-05 20:04:49.420 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering normal template net-2-linux-bonds-with-vlans.j2.yaml
+2021-03-05 20:04:49.420 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./environments/net-2-linux-bonds-with-vlans.yaml
+2021-03-05 20:04:49.420 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering normal template net-bond-with-vlans-no-external.j2.yaml
+2021-03-05 20:04:49.421 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./environments/net-bond-with-vlans-no-external.yaml
+2021-03-05 20:04:49.421 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering normal template net-dpdkbond-with-vlans.j2.yaml
+2021-03-05 20:04:49.421 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./environments/net-dpdkbond-with-vlans.yaml
+2021-03-05 20:04:49.421 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering normal template net-multiple-nics-vlans.j2.yaml
+2021-03-05 20:04:49.421 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./environments/net-multiple-nics-vlans.yaml
+2021-03-05 20:04:49.421 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering normal template net-single-nic-linux-bridge-with-vlans.j2.yaml
+2021-03-05 20:04:49.422 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./environments/net-single-nic-linux-bridge-with-vlans.yaml
+2021-03-05 20:04:49.422 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering normal template net-single-nic-with-vlans-no-external.j2.yaml
+2021-03-05 20:04:49.422 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./environments/net-single-nic-with-vlans-no-external.yaml
+2021-03-05 20:04:49.422 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering normal template net-single-nic-with-vlans.j2.yaml
+2021-03-05 20:04:49.422 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./environments/net-single-nic-with-vlans.yaml
+2021-03-05 20:04:49.422 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering normal template network-environment-v6-all.j2.yaml
+2021-03-05 20:04:49.422 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./environments/network-environment-v6-all.yaml
+2021-03-05 20:04:49.422 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering normal template network-environment-v6.j2.yaml
+2021-03-05 20:04:49.423 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./environments/network-environment-v6.yaml
+2021-03-05 20:04:49.423 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering normal template network-environment.j2.yaml
+2021-03-05 20:04:49.423 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./environments/network-environment.yaml
+2021-03-05 20:04:49.423 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering normal template network-isolation-no-tunneling.j2.yaml
+2021-03-05 20:04:49.423 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./environments/network-isolation-no-tunneling.yaml
+2021-03-05 20:04:49.423 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering normal template network-isolation-v6-all.j2.yaml
+2021-03-05 20:04:49.424 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./environments/network-isolation-v6-all.yaml
+2021-03-05 20:04:49.424 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering normal template network-isolation-v6.j2.yaml
+2021-03-05 20:04:49.424 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./environments/network-isolation-v6.yaml
+2021-03-05 20:04:49.424 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering normal template network-isolation.j2.yaml
+2021-03-05 20:04:49.424 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./environments/network-isolation.yaml
+2021-03-05 20:04:49.424 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering normal template networks-disable.j2.yaml
+2021-03-05 20:04:49.424 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./environments/networks-disable.yaml
+2021-03-05 20:04:49.425 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering normal template overcloud-baremetal.j2.yaml
+2021-03-05 20:04:49.425 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./environments/overcloud-baremetal.yaml
+2021-03-05 20:04:49.425 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering normal template split-stack-consistent-hostname-format.j2.yaml
+2021-03-05 20:04:49.425 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./environments/split-stack-consistent-hostname-format.yaml
+2021-03-05 20:04:49.425 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering normal template enable-internal-tls.j2.yaml
+2021-03-05 20:04:49.425 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./environments/ssl/enable-internal-tls.yaml
+2021-03-05 20:04:49.425 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering normal template swap-partition.j2.yaml
+2021-03-05 20:04:49.426 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./extraconfig/all_nodes/swap-partition.yaml
+2021-03-05 20:04:49.426 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering normal template swap.j2.yaml
+2021-03-05 20:04:49.426 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./extraconfig/all_nodes/swap.yaml
+2021-03-05 20:04:49.426 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering role template role.role.j2.yaml
+2021-03-05 20:04:49.426 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering roles Undercloud
+2021-03-05 20:04:49.427 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./extraconfig/nova_metadata/krb-service-principals/undercloud-role.yaml
+2021-03-05 20:04:49.427 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering network template network.network.j2.yaml
+2021-03-05 20:04:49.427 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering networks External
+2021-03-05 20:04:49.427 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./network/external.yaml
+2021-03-05 20:04:49.427 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering network template network_v6.network.j2.yaml
+2021-03-05 20:04:49.427 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering networks External
+2021-03-05 20:04:49.428 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./network/external_v6.yaml
+2021-03-05 20:04:49.428 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering normal template networks.j2.yaml
+2021-03-05 20:04:49.428 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./network/networks.yaml
+2021-03-05 20:04:49.428 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering normal template service_net_map.j2.yaml
+2021-03-05 20:04:49.428 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./network/service_net_map.yaml
+2021-03-05 20:04:49.428 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering network template external_resource_port.network.j2.yaml
+2021-03-05 20:04:49.428 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering networks External
+2021-03-05 20:04:49.429 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./network/ports/external_resource_external.yaml
+2021-03-05 20:04:49.429 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering network template external_resource_port_v6.network.j2.yaml
+2021-03-05 20:04:49.429 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering networks External
+2021-03-05 20:04:49.429 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./network/ports/external_resource_external_v6.yaml
+2021-03-05 20:04:49.429 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering normal template net_ip_list_map.j2.yaml
+2021-03-05 20:04:49.429 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./network/ports/net_ip_list_map.yaml
+2021-03-05 20:04:49.429 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering normal template net_ip_map.j2.yaml
+2021-03-05 20:04:49.430 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./network/ports/net_ip_map.yaml
+2021-03-05 20:04:49.430 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering normal template net_vip_map_external.j2.yaml
+2021-03-05 20:04:49.430 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./network/ports/net_vip_map_external.yaml
+2021-03-05 20:04:49.430 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering normal template net_vip_map_external_v6.j2.yaml
+2021-03-05 20:04:49.554 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./network/ports/net_vip_map_external_v6.yaml
+2021-03-05 20:04:49.555 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering network template port.network.j2.yaml
+2021-03-05 20:04:49.555 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering networks External
+2021-03-05 20:04:49.555 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./network/ports/external.yaml
+2021-03-05 20:04:49.555 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering network template port_from_pool.network.j2.yaml
+2021-03-05 20:04:49.555 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering networks External
+2021-03-05 20:04:49.556 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./network/ports/external_from_pool.yaml
+2021-03-05 20:04:49.556 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering network template port_from_pool_v6.network.j2.yaml
+2021-03-05 20:04:49.556 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering networks External
+2021-03-05 20:04:49.556 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./network/ports/external_from_pool_v6.yaml
+2021-03-05 20:04:49.556 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering network template port_v6.network.j2.yaml
+2021-03-05 20:04:49.557 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering networks External
+2021-03-05 20:04:49.557 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./network/ports/external_v6.yaml
+2021-03-05 20:04:49.557 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering network template deployed_port.network.j2.yaml
+2021-03-05 20:04:49.557 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering networks External
+2021-03-05 20:04:49.558 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./network/ports/deployed_external.yaml
+2021-03-05 20:04:49.558 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering role template role.role.j2.yaml
+2021-03-05 20:04:49.558 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] jinja2 rendering roles Undercloud
+2021-03-05 20:04:49.558 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] rendering j2 template to file: /home/stack/tripleo-heat-installer-templates/./puppet/undercloud-role.yaml
+2021-03-05 20:04:50.011 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] /etc/keystone file is Absent.
+2021-03-05 20:04:54.152 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] ** Performing Heat stack create.. **
+2021-03-05 20:08:18.216 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] ** Downloading undercloud ansible.. **
+2021-03-05 20:08:26.921 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] Generating default ansible config file /home/stack/ansible.cfg
+2021-03-05 20:33:20.503 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] Install artifact is located at /home/stack/undercloud-install-20210305103318.tar.bzip2
+2021-03-05 20:33:20.504 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] 
+########################################################
+
+Deployment successful!
+
+########################################################
+
+2021-03-05 20:33:20.504 311541 WARNING tripleoclient.v1.tripleo_deploy.Deploy [  admin] Writing the stack virtual update mark file /var/lib/tripleo-heat-installer/update_mark_undercloud
+2021-03-05 20:33:21.203 310683 WARNING tripleoclient.v1.undercloud.UpgradeUndercloud [  ] 
+##########################################################
+
+The Undercloud has been successfully upgraded.
+
+Useful files:
+
+Password file is at /home/stack/undercloud-passwords.conf
+The stackrc file is at ~/stackrc
+
+Use these files to interact with OpenStack services, and
+ensure they are secured.
+
+##########################################################
+

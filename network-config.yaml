@@ -7,12 +7,16 @@ parameter_defaults:
   ExternalMtu: 9000
   PublicVirtualFixedIPs: [{'ip_address':'172.20.10.25'}]
   CloudDomain: bne-home.net
-  NetworkDeploymentActions: ['CREATE']
-  # NetworkDeploymentActions: ['CREATE','UPDATE']
-  NeutronEnableDVR: true
+  # NetworkDeploymentActions: ['CREATE']
+  NetworkDeploymentActions: ['CREATE','UPDATE']
+  NeutronEnableDVR: false
   ExtraFirewallRules:
     '301 allow Prometheus':
       dport: 9100
       proto: tcp
       source: 172.20.0.0/16
       action: insert
+
+  ## After Swift has been removed from the Undercloud, we can't use it to upload Swift Rings to:
+  SwiftRingPutTempurl: ''
+  SwiftRingGetTempurl: ''

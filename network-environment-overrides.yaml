@@ -12,13 +12,6 @@
 # default_route_networks list for the Controller role in roles_data.yaml.
 # Then include this environment file to use bond-with-vlans NIC configs.
 
-resource_registry:
-  OS::TripleO::Controller::Net::SoftwareConfig: OS::Heat::None
-  OS::TripleO::Compute::Net::SoftwareConfig: OS::Heat::None
-  OS::TripleO::BlockStorage::Net::SoftwareConfig: OS::Heat::None
-  OS::TripleO::ObjectStorage::Net::SoftwareConfig: OS::Heat::None
-  OS::TripleO::CephStorage::Net::SoftwareConfig: OS::Heat::None
-  OS::TripleO::ComputeDell::Net::SoftwareConfig: OS::Heat::None
 parameter_defaults:
   ControllerNetworkConfigTemplate: '~/templates/nic-configs/multiple_nics_dvr.j2'
   ComputeNetworkConfigTemplate: '~/templates/nic-configs/multiple_nics_dvr.j2'
