@@ -44,12 +44,14 @@ network_config:
   mtu: {{ lookup('vars', networks_lower['External'] ~ '_mtu') }}
   dns_servers: {{ ctlplane_dns_nameservers }}
   use_dhcp: false
-  addresses:
-  - ip_netmask:
-      {{ lookup('vars', networks_lower['External'] ~ '_ip') }}/{{ lookup('vars', networks_lower['External'] ~ '_cidr') }}
-  routes: {{ lookup('vars', networks_lower['External'] ~ '_host_routes') }}
   members:
-  - type: interface
+  - type: vlan
     name: nic{{nics_used[-1] + 1}}
     mtu: {{ lookup('vars', networks_lower['External'] ~ '_mtu') }}
+    vlan_id: {{ lookup('vars', networks_lower['External'] ~ '_vlan_id') }}
     primary: true
+    defroute: true
+    addresses:
+    - ip_netmask:
+        {{ lookup('vars', networks_lower['External'] ~ '_ip') }}/{{ lookup('vars', networks_lower['External'] ~ '_cidr') }}
+    routes: {{ lookup('vars', networks_lower['External'] ~ '_host_routes') }}

@@ -1,5 +1,5 @@
 parameter_defaults:
-  DnsServers: ['192.168.1.221']
+  DnsServers: ['192.168.1.221','172.20.10.22']
   StorageMtu: 9000
   StorageMgmtMtu: 9000
   InternalApiMtu: 9000
@@ -7,9 +7,17 @@ parameter_defaults:
   ExternalMtu: 9000
   PublicVirtualFixedIPs: [{'ip_address':'172.20.10.25'}]
   CloudDomain: bne-home.net
+<<<<<<< HEAD
   # NetworkDeploymentActions: ['CREATE']
   NetworkDeploymentActions: ['CREATE','UPDATE']
   NeutronEnableDVR: false
+=======
+  NetworkDeploymentActions: ['CREATE']
+  # NetworkDeploymentActions: ['CREATE','UPDATE']
+  # ComputeNetworkDeploymentActions: ['CREATE','UPDATE']
+  NeutronEnableDVR: false
+  BondInterfaceOvsOptions: bond_mode=balance-slb
+>>>>>>> 22080dc0069fd913fc2092ebad07488da11e284c
   ExtraFirewallRules:
     '301 allow Prometheus':
       dport: 9100
