@@ -8,15 +8,9 @@ deploy(){
                 -e /home/stack/templates/overcloud-baremetal-deployed.yaml \
 		-e /usr/share/openstack-tripleo-heat-templates/environments/network-environment.yaml \
 		-e /usr/share/openstack-tripleo-heat-templates/environments/network-isolation.yaml \
-<<<<<<< HEAD
 		-e /usr/share/openstack-tripleo-heat-templates/environments/services/octavia.yaml \
 		-e /home/stack/templates/octavia-config.yaml \
                 -e ~/templates/network-environment-overrides.yaml \
-=======
-                -e /usr/share/openstack-tripleo-heat-templates/environments/services/octavia.yaml \
-		-e /usr/share/openstack-tripleo-heat-templates/environments/services/heat-engine.yaml \
-		-e ~/templates/network-environment-overrides.yaml \
->>>>>>> 22080dc0069fd913fc2092ebad07488da11e284c
 		-e /home/stack/templates/network-config.yaml \
 		-e /home/stack/templates/octavia-config.yaml \
 		-e /home/stack/templates/storage_custom.yaml \
@@ -77,3 +71,4 @@ deploy_config_download(){
 $@
 
 #-e ~/ssl-heat-templates/environments/ssl/enable-tls.yaml -e ~/ssl-heat-templates/environments/ssl/tls-endpoints-public-ip.yaml -e ~/ssl-heat-templates/environments/ssl/inject-trust-anchor.yaml
+
