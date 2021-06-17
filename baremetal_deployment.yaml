@@ -1,0 +1,96 @@
+# Generated with the following on 2021-06-01T09:45:16.278958
+#
+#   openstack overcloud node extract provisioned --stack overcloud --roles-file /home/stack/templates/roles_data.yaml --output /home/stack/templates/baremetal_deployment.yaml
+#
+
+- name: Controller
+  count: 1
+  hostname_format: '%stackname%-controller-%index%'
+  defaults:
+    network_config:
+      default_route_network:
+      - External
+      network_deployment_actions:
+      - CREATE
+      physical_bridge_name: br-ex
+      public_interface_name: nic1
+      template: ~/templates/nic-configs/multiple_nics_dvr.j2
+    networks:
+    - network: ctlplane
+      subnet: ctlplane-subnet
+      vif: true
+    - network: storage
+      subnet: storage_subnet
+    - network: storage_mgmt
+      subnet: storage_mgmt_subnet
+    - network: internal_api
+      subnet: internal_api_subnet
+    - network: tenant
+      subnet: tenant_subnet
+    - network: external
+      subnet: external_subnet
+  instances:
+  - hostname: overcloud-controller-0
+    name: controller-0
+  - hostname: overcloud-controller-1
+    name: controller-1
+    provisioned: false
+  - hostname: overcloud-controller-2
+    name: controller-2
+    provisioned: false
+- name: Compute
+  count: 1
+  hostname_format: '%stackname%-novacompute-%index%'
+  defaults:
+    network_config:
+      default_route_network:
+      - External
+      network_deployment_actions:
+      - CREATE
+      physical_bridge_name: br-ex
+      public_interface_name: nic1
+      template: ~/templates/nic-configs/multiple_nics_dvr.j2
+    networks:
+    - network: ctlplane
+      subnet: ctlplane-subnet
+      vif: true
+    - network: storage
+      subnet: storage_subnet
+    - network: internal_api
+      subnet: internal_api_subnet
+    - network: tenant
+      subnet: tenant_subnet
+    - network: external
+      subnet: external_subnet
+  instances:
+  - hostname: overcloud-novacompute-0
+    name: compute-0
+  - hostname: overcloud-novacompute-1
+    name: compute-1
+    provisioned: false
+    #- name: ComputeDell
+    #  count: 1
+    #  hostname_format: '%stackname%-dellcompute-%index%'
+    #  defaults:
+    #    network_config:
+    #      default_route_network:
+    #      - External
+    #      network_deployment_actions:
+    #      - CREATE
+    #      physical_bridge_name: br-ex
+    #      public_interface_name: nic1
+    #      template: ~/templates/nic-configs/bonds_vlans/bonds_vlans.j2
+    #    networks:
+    #    - network: ctlplane
+    #      subnet: ctlplane-subnet
+    #      vif: true
+    #    - network: storage
+    #      subnet: storage_subnet
+    #    - network: internal_api
+    #      subnet: internal_api_subnet
+    #    - network: tenant
+    #      subnet: tenant_subnet
+    #    - network: external
+    #      subnet: external_subnet
+    #  instances:
+    #  - hostname: overcloud-dellcompute-0

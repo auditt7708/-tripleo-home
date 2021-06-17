@@ -1,0 +1,18 @@
+parameter_defaults:
+  CinderWorkers: 8
+  GlanceWorkers: 8
+  HeatWorkers: 8
+  KeystoneWorkers: 8
+  NeutronWorkers: 8
+  NeutronMetadataWorkers: 8
+  NovaWorkers: 8
+  NovaSchedulerWorkers: 8
+  SwiftWorkers: 1
+  PlacementWorkers: 8
+  GnocchiMetricdWorkers: 1
+
+  ControllerExtraConfig:
+      'nova::network::neutron::timeout': '60'
+
+  DatabaseSyncTimeout: 900
+

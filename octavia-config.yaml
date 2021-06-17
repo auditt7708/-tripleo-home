@@ -1,2 +1,3 @@
 parameter_defaults:
+  OctaviaAmphoraSshKeyName: "new-octavia-key"
   OctaviaAmphoraPubSshKey: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAAAgQC/LGjIvFT9U02zT6EZEhhqqMfUSCmuMlAyH8ozqdzkXQ9rS1psv2YbjFp7Oc2PtmDW64KGwypk2YoXTbxWHapJRimpO05i4msk2ny0vPPQCEir2AZMvPO+tM0ZXM2mBzVOwjSYwREfbmc82wUjDNy06bBQNweUhUieAogffg6hOw== root@tripleo-director.bne-home.net"

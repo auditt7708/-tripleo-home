@@ -2,19 +2,13 @@ parameter_defaults:
   ComputeCount: 1
   ComputeDellCount: 1
   ComputeHostnameFormat: '%stackname%-novacompute-%index%'
-  ControllerCount: 3
+  ControllerCount: 1
   ControllerHostnameFormat: '%stackname%-controller-%index%'
   ComputeRemovalPolicies: []
   DeployedServerPortMap:
-    overcloud-controller-0-ctlplane:
-      fixed_ips:
-      - ip_address: 192.168.24.10
-    overcloud-controller-1-ctlplane:
-      fixed_ips:
-      - ip_address: 192.168.24.13
-    overcloud-controller-2-ctlplane:
-      fixed_ips:
-      - ip_address: 192.168.24.12
+   overcloud-controller-0-ctlplane:
+     fixed_ips:
+     - ip_address: 192.168.24.10
    overcloud-dellcompute-0-ctlplane:
      fixed_ips:
      - ip_address: 192.168.24.90

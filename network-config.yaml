@@ -1,5 +1,5 @@
 parameter_defaults:
-  DnsServers: ['192.168.1.221','172.20.10.22']
+  DnsServers: ['192.168.1.221']
   StorageMtu: 9000
   StorageMgmtMtu: 9000
   InternalApiMtu: 9000
@@ -22,3 +22,6 @@ parameter_defaults:
   SwiftRingPutTempurl: ''
   SwiftRingGetTempurl: ''
 
+resource_registry:
+  OS::TripleO::Network::Ports::RedisVipPort: OS::Heat::None
+  OS::TripleO::Network::Ports::OVNDBsVipPort: OS::Heat::None

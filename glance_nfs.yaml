@@ -1,0 +1,2 @@
+parameter_defaults:
+        GlanceNfsOptions: "rw,sync,context=system_u:object_r:glance_var_lib_t:s0"

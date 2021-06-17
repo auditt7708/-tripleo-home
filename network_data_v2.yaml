@@ -1,0 +1,83 @@
+- dns_domain: storage.localdomain.
+  mtu: 9000
+  name: Storage
+  name_lower: storage
+  subnets:
+    storage_subnet:
+      allocation_pools:
+      - end: 172.16.1.250
+        start: 172.16.1.4
+      ip_subnet: 172.16.1.0/24
+      physical_network: storage
+      routes: []
+      vlan: 30
+  vip: true
+- dns_domain: storagemgmt.localdomain.
+  mtu: 9000
+  name: StorageMgmt
+  name_lower: storage_mgmt
+  subnets:
+    storage_mgmt_subnet:
+      allocation_pools:
+      - end: 172.16.3.250
+        start: 172.16.3.4
+      ip_subnet: 172.16.3.0/24
+      physical_network: storage_mgmt
+      routes: []
+      vlan: 40
+  vip: true
+- dns_domain: internalapi.localdomain.
+  mtu: 9000
+  name: InternalApi
+  name_lower: internal_api
+  subnets:
+    internal_api_subnet:
+      allocation_pools:
+      - end: 172.16.2.250
+        start: 172.16.2.4
+      ip_subnet: 172.16.2.0/24
+      physical_network: internal_api
+      routes: []
+      vlan: 20
+  vip: true
+- dns_domain: tenant.localdomain.
+  mtu: 9000
+  name: Tenant
+  name_lower: tenant
+  subnets:
+    tenant_subnet:
+      allocation_pools:
+      - end: 172.16.0.250
+        start: 172.16.0.4
+      ip_subnet: 172.16.0.0/24
+      physical_network: tenant
+      routes: []
+      vlan: 50
+- dns_domain: external.localdomain.
+  mtu: 9000
+  name: External
+  name_lower: external
+  subnets:
+    external_subnet:
+      allocation_pools:
+      - end: 172.20.10.30
+        start: 172.20.10.10
+      gateway_ip: 172.20.0.254
+      ip_subnet: 172.20.0.0/16
+      physical_network: external
+      routes: []
+      vlan: 4
+  vip: true
+- dns_domain: management.bne-home.net.
+  name: Management
+  name_lower: management
+  subnets:
+    management_subnet:
+      allocation_pools:
+      - end: 10.0.1.250
+        start: 10.0.1.4
+      gateway_ip: 10.0.1.1
+      ip_subnet: 10.0.1.0/24
+      physical_network: management
+      routes: []
+      vlan: 60
