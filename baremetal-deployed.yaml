@@ -2,6 +2,7 @@ parameter_defaults:
   ComputeCount: 1
   ComputeHostnameFormat: '%stackname%-novacompute-%index%'
   ControllerCount: 1
+  DellComputeCount: 1
   ControllerHostnameFormat: '%stackname%-controller-%index%'
   ControllerRemovalPolicies:
   - resource_list:
@@ -14,11 +15,15 @@ parameter_defaults:
     overcloud-novacompute-0-ctlplane:
       fixed_ips:
       - ip_address: 192.168.24.20
+    overcloud-dellcompute-0-ctlplane:
+      fixed_ips:
+      - ip_address: 192.168.24.90
   HostnameMap:
     overcloud-controller-0: overcloud-controller-0
     overcloud-controller-1: overcloud-controller-1
     overcloud-controller-2: overcloud-controller-2
     overcloud-novacompute-0: overcloud-novacompute-0
+    overcloud-dellcompute-0: overcloud-dellcompute-0
   NodePortMap:
     overcloud-controller-0:
       ctlplane:
@@ -66,6 +71,27 @@ parameter_defaults:
         ip_address: 172.16.0.125
         ip_address_uri: 172.16.0.125
         ip_subnet: 172.16.0.125/24
+    overcloud-dellcompute-0:
+      ctlplane:
+        ip_address: 192.168.24.90
+        ip_address_uri: 192.168.24.90
+        ip_subnet: 192.168.24.90/24
+      external:
+        ip_address: 172.20.10.12
+        ip_address_uri: 172.20.10.12
+        ip_subnet: 172.20.10.12/16
+      internal_api:
+        ip_address: 172.16.2.102
+        ip_address_uri: 172.16.2.102
+        ip_subnet: 172.16.2.102/24
+      storage:
+        ip_address: 172.16.1.209
+        ip_address_uri: 172.16.1.209
+        ip_subnet: 172.16.1.209/24
+      tenant:
+        ip_address: 172.16.0.97
+        ip_address_uri: 172.16.0.97
+        ip_subnet: 172.16.0.97/24
 resource_registry:
   OS::TripleO::Compute::Ports::ExternalPort: /usr/share/openstack-tripleo-heat-templates/network/ports/deployed_external.yaml
   OS::TripleO::Compute::Ports::InternalApiPort: /usr/share/openstack-tripleo-heat-templates/network/ports/deployed_internal_api.yaml
@@ -77,3 +103,7 @@ resource_registry:
   OS::TripleO::Controller::Ports::StoragePort: /usr/share/openstack-tripleo-heat-templates/network/ports/deployed_storage.yaml
   OS::TripleO::Controller::Ports::TenantPort: /usr/share/openstack-tripleo-heat-templates/network/ports/deployed_tenant.yaml
   OS::TripleO::DeployedServer::ControlPlanePort: /usr/share/openstack-tripleo-heat-templates/deployed-server/deployed-neutron-port.yaml
+  OS::TripleO::ComputeDell::Ports::ExternalPort: /usr/share/openstack-tripleo-heat-templates/network/ports/deployed_external.yaml
+  OS::TripleO::ComputeDell::Ports::InternalApiPort: /usr/share/openstack-tripleo-heat-templates/network/ports/deployed_internal_api.yaml
+  OS::TripleO::ComputeDell::Ports::StoragePort: /usr/share/openstack-tripleo-heat-templates/network/ports/deployed_storage.yaml
+  OS::TripleO::ComputeDell::Ports::TenantPort: /usr/share/openstack-tripleo-heat-templates/network/ports/deployed_tenant.yaml
