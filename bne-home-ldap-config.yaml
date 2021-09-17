@@ -1,0 +1,22 @@
+parameter_defaults:
+  KeystoneLDAPDomainEnable: true
+  KeystoneLDAPBackendConfigs:
+    bne-home.net:
+      url: ldap://192.168.1.221
+      user: "uid=keystone,cn=users,cn=accounts,dc=bne-home,dc=net"
+      password: "testpassword"
+      suffix: dc=bne-home,dc=net
+      user_tree_dn: cn=users,cn=accounts,dc=bne-home,dc=net
+      user_filter: "(memberOf=cn=openstack,cn=groups,cn=accounts,dc=bne-home,dc=net)"
+      user_objectclass: person
+      user_id_attribute: uid
+      user_mail_attribute: mail
+      group_tree_dn: cn=groups,cn=accounts,dc=bne-home,dc=net
+      group_objectclass: groupOfNames
+      group_id_attribute: cn
+      group_name_attribute: cn
+      group_member_attribute: member
+      group_desc_attribute: description
+      user_enabled_attribute: nsAccountLock
+      user_enabled_default: False
+      user_enabled_invert: true

@@ -84,6 +84,10 @@ parameter_defaults:
   # Type: string
   DeployedSSLCertificatePath: /etc/pki/tls/private/overcloud_endpoint.pem
 
+  # Specifies the default CA cert to use if TLS is used for services in the public network.
+  # Type: string
+  PublicTLSCAFile: '/etc/pki/ca-trust/source/anchors/overcloud-cacert.pem'
+
   # *********************
   # End static parameters
   # *********************

@@ -68,29 +68,29 @@
   - hostname: overcloud-novacompute-1
     name: compute-1
     provisioned: false
-    #- name: ComputeDell
-    #  count: 1
-    #  hostname_format: '%stackname%-dellcompute-%index%'
-    #  defaults:
-    #    network_config:
-    #      default_route_network:
-    #      - External
-    #      network_deployment_actions:
-    #      - CREATE
-    #      physical_bridge_name: br-ex
-    #      public_interface_name: nic1
-    #      template: ~/templates/nic-configs/bonds_vlans/bonds_vlans.j2
-    #    networks:
-    #    - network: ctlplane
-    #      subnet: ctlplane-subnet
-    #      vif: true
-    #    - network: storage
-    #      subnet: storage_subnet
-    #    - network: internal_api
-    #      subnet: internal_api_subnet
-    #    - network: tenant
-    #      subnet: tenant_subnet
-    #    - network: external
-    #      subnet: external_subnet
-    #  instances:
-    #  - hostname: overcloud-dellcompute-0
+- name: ComputeDell
+  count: 1
+  hostname_format: '%stackname%-dellcompute-%index%'
+  defaults:
+    network_config:
+      default_route_network:
+      - External
+      network_deployment_actions:
+      - CREATE
+      physical_bridge_name: br-ex
+      public_interface_name: nic1
+      template: ~/templates/nic-configs/bonds_vlans/bonds_vlans.j2
+    networks:
+    - network: ctlplane
+      subnet: ctlplane-subnet
+      vif: true
+    - network: storage
+      subnet: storage_subnet
+    - network: internal_api
+      subnet: internal_api_subnet
+    - network: tenant
+      subnet: tenant_subnet
+    - network: external
+      subnet: external_subnet
+  instances:
+  - hostname: overcloud-dellcompute-0
