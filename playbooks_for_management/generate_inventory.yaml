@@ -1,0 +1,18 @@
+---
+- hosts: localhost
+  vars:
+    plan: overcloud
+    ssh_network: ctlplane
+    ansible_ssh_user: tripleo-admin
+    ansible_ssh_private_key_file: /home/stack/.ssh/id_rsa
+    python_interpreter: null
+
+  tasks:
+  - name: Generate ansible inventory
+    tripleo_generate_ansible_inventory:
+      plan: "{{ plan }}"
+      work_dir: "{{ work_dir }}"
+      ssh_network: "{{ ssh_network }}"
+      ansible_ssh_user: "{{ ansible_ssh_user }}"
+      ansible_python_interpreter: "{{ python_interpreter }}"
+      ansible_ssh_private_key_file: "{{ ansible_ssh_private_key_file }}"

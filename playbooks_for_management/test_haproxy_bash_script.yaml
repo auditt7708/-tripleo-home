@@ -1,0 +1,16 @@
+---
+- hosts: overcloud-controller-0
+  gather_facts: false
+  tasks:
+    - name: copy certificate, chgrp, restart haproxy
+       shell: |
+         set -e
+         container_id=$({{ container_cli }} ps --filter name=haproxy-bundle -q)
+         if [[ "x$container_id" ! = "x" ]]; then
+           tar -c {{ cert_path }} | {{ container_cli }} exec -i $container_id tar -C / -xv
+         else
+           {{ container_cli }} cp {{ cert_path }} {{ item }}:{{ cert_path }}
+         fi
+         {{ container_cli }} exec --user root $container_id chgrp haproxy {{ cert_path }}
+         {{ container_cli }} kill --signal=HUP $container_id
+       register: container_kill_resul

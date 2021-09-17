@@ -1,0 +1,15 @@
+---
+- name: Check BackupNode group
+  hosts: localhost
+  tasks:
+    - name: Get BackupNode group name
+      set_fact:
+         tripleo_backup_nfs_server_group: '{{ nfs_server_group_name | default("BackupNode") }}'
+      tags: bar_setup_nfs_server
+
+    - assert:
+        that:
+          - tripleo_backup_nfs_server_group in groups
+          - ( groups[tripleo_backup_nfs_server_group] | length ) > 0
+        fail_msg: There is no server on {{tripleo_backup_nfs_server_group}} groups
+      tags: bar_setup_nfs_server

@@ -1,0 +1,25 @@
+---
+- hosts: overcloud-controller-0
+  gather_facts: True
+  tasks:
+          
+  - name: Per step starting of the containers using tripleo-ansible
+    become: true
+    environment:
+      TRIPLEO_MINOR_UPDATE: '{{ tripleo_minor_update | default(false) }}'
+    block:
+      - name: "Manage containers for step {{ step }} with tripleo-ansible"
+        include_role:
+          name: tripleo_container_manage
+        vars:
+          tripleo_container_manage_concurrency: 5
+          tripleo_container_manage_systemd_order: true
+          tripleo_container_manage_cli: "podman"
+          tripleo_container_manage_config: "/var/lib/tripleo-config/container-startup-config/step_4"
+          tripleo_container_manage_config_id: "tripleo_step4"
+          tripleo_container_manage_debug: true
+          tripleo_container_manage_healthcheck_disabled: false
+          tripleo_container_manage_log_path: "/var/log/containers/stdouts"
+          tripleo_container_manage_config_patterns: '*.json'
+          tripleo_container_manage_check_puppet_config: true
+          tripleo_container_manage_valid_exit_code: [0]

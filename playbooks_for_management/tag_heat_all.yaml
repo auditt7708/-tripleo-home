@@ -1,0 +1,26 @@
+---
+- hosts: localhost
+  gather_facts: False
+  tasks:
+    - block:
+      - import_role:
+          name: tripleo_container_tag
+        name: Tag Heat All image
+        vars:
+          container_image: 192.168.24.1:8787/tripleomaster/openstack-heat-all:current-tripleo
+          container_image_latest: localhost/tripleo/openstack-heat-all:ephemeral
+      - import_role:
+          name: tripleo_container_tag
+        name: Tag Heat Engine image
+        vars:
+          container_image: 192.168.24.1:8787/tripleomaster/openstack-heat-engine:current-tripleo
+          container_image_latest: localhost/tripleo/openstack-heat-engine:ephemeral
+      - import_role:
+          name: tripleo_container_tag
+        name: Tag Heat Api image
+        vars:
+          container_image: 192.168.24.1:8787/tripleomaster/openstack-heat-api:current-tripleo
+          container_image_latest: localhost/tripleo/openstack-heat-api:ephemeral
+      name: Tag Ephemeral Heat Containers for Overcloud Deploy
+      when:
+      - step|int == 5

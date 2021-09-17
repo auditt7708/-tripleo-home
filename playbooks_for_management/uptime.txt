@@ -1,0 +1,3 @@
+startMinute=27115083
+upMinutes=0
+currentMinute=27115083

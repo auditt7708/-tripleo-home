@@ -1,0 +1,10 @@
+---
+- hosts: all
+  gather_facts: false
+  tasks:
+
+    - name: Transfer repos
+      copy:
+        src: /etc/yum.repos.d/delorean.repo
+        dest: /etc/yum.repos.d/delorean.repo
+      become: true

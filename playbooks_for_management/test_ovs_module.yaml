@@ -1,0 +1,12 @@
+---
+- hosts: overcloud-controller-0
+  gather_facts: false
+  tasks:
+    - name: Special treatment for OpenvSwitch
+      register: ovs_upgrade
+      tripleo_ovs_upgrade:
+      ignore_errors: true
+
+    - name: Print stdout to get var values
+      debug:
+        msg: "Vars from OVS module: {{ ovs_upgrade.module_stdout }}"

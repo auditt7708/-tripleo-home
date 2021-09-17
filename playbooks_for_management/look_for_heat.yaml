@@ -1,0 +1,13 @@
+---
+- hosts: localhost
+  pre_tasks:
+     - name: Check for the Orchestration service
+       shell: >-
+          openstack endpoint list -c "Service Name" -f value
+       register: heat_present
+
+  tasks:
+     - name: Print heat status
+       debug:
+            msg: "Print var: {{ heat_present.stdout }}"
+       when: '"heat" in heat_present.stdout'
