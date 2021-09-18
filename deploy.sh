@@ -19,7 +19,6 @@ deploy(){
                 -e /home/stack/templates/cloudname.yaml \
                 -e /home/stack/templates/inject-trust-anchor.yaml \
                 -e /home/stack/templates/service_tuning.yaml \
-                -e /home/stack/templates/networks-deployed.yaml \
                 -e /home/stack/templates/baremetal-deployed.yaml \
                 -e /home/stack/templates/vips-deployed.yaml \
                 -e /home/stack/templates/vip_mapping.yaml \
