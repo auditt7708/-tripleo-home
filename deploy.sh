@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
 deploy(){
-	openstack overcloud deploy --templates --disable-validations --deployed-server \
+	openstack overcloud deploy --debug --templates --disable-validations --deployed-server \
+                --heat-container-api-image tripleo-director.ctlplane.localdomain:8787/tripleomaster/openstack-heat-api:current-tripleo \
+		--heat-container-engine-image tripleo-director.ctlplane.localdomain:8787/tripleomaster/openstack-heat-engine:current-tripleo \
                 -r /home/stack/templates/roles_data.yaml \
                 -n /home/stack/templates/network_data_v2.yaml \
                 -e /usr/share/openstack-tripleo-heat-templates/environments/deployed-server-environment.yaml \
