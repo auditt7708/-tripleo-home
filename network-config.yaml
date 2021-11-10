@@ -7,7 +7,7 @@ parameter_defaults:
   ExternalMtu: 9000
   PublicVirtualFixedIPs: [{'ip_address':'172.20.10.25'}]
   CloudDomain: bne-home.net
-  ComputeNetworkConfigUpdate: True
+  ComputeNetworkConfigUpdate: False
   #NetworkDeploymentActions: ['CREATE','UPDATE']
   # ComputeNetworkDeploymentActions: ['CREATE','UPDATE']
   NeutronEnableDVR: false
@@ -23,5 +23,6 @@ parameter_defaults:
   SwiftRingGetTempurl: ''
 
 resource_registry:
+  OS::TripleO::Network::Ports::ControlPlaneVipPort: OS::Heat::None
   OS::TripleO::Network::Ports::RedisVipPort: OS::Heat::None
   OS::TripleO::Network::Ports::OVNDBsVipPort: OS::Heat::None

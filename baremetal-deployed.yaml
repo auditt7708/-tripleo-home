@@ -15,6 +15,9 @@ parameter_defaults:
     overcloud-novacompute-0-ctlplane:
       fixed_ips:
       - ip_address: 192.168.24.20
+        #overcloud-novacompute-1.ctlplane:
+        #  fixed_ips:
+        #  - ip_address: 192.168.24.12
     overcloud-dellcompute-0-ctlplane:
       fixed_ips:
       - ip_address: 192.168.24.90
@@ -23,6 +26,7 @@ parameter_defaults:
     overcloud-controller-1: overcloud-controller-1
     overcloud-controller-2: overcloud-controller-2
     overcloud-novacompute-0: overcloud-novacompute-0
+    #overcloud-novacompute-1: overcloud-novacompute-1
     overcloud-dellcompute-0: overcloud-dellcompute-0
   NodePortMap:
     overcloud-controller-0:
@@ -71,6 +75,27 @@ parameter_defaults:
         ip_address: 172.16.0.125
         ip_address_uri: 172.16.0.125
         ip_subnet: 172.16.0.125/24
+        #overcloud-novacompute-1:
+        #  ctlplane:
+        #    ip_address: 192.168.24.12
+        #    ip_address_uri: 192.168.24.12
+        #    ip_subnet: 192.168.24.12/24
+        #  external:
+        #    ip_address: 172.20.10.12
+        #    ip_address_uri: 172.20.10.12
+        #    ip_subnet: 172.20.10.12/16
+        #  internal_api:
+        #    ip_address: 172.16.2.6
+        #    ip_address_uri: 172.16.2.6
+        #    ip_subnet: 172.16.2.6/24
+        #  storage:
+        #    ip_address: 172.16.1.89
+        #    ip_address_uri: 172.16.1.89
+        #    ip_subnet: 172.16.1.89/24
+        #  tenant:
+        #    ip_address: 172.16.0.126
+        #    ip_address_uri: 172.16.0.126
+        #    ip_subnet: 172.16.0.126/24
     overcloud-dellcompute-0:
       ctlplane:
         ip_address: 192.168.24.90

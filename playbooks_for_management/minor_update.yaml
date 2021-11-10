@@ -1,0 +1,26 @@
+---
+- hosts: Undercloud
+  tasks:
+    - name: Backup and remove repos
+      shell: mv /etc/yum.repos.d/delorean* /home/stack/REPOBACKUP/
+      become: true
+
+    - name: Remove Delorean repos
+      file:
+       src: /etc/yum.repos.d/delorean*
+       state: absent
+
+    - name: Backup DB
+      shell: |
+        pass=$(sudo /bin/hiera -c /etc/puppet/hiera.yaml mysql::server::root_password)
+        sudo podman exec $(sudo podman ps --filter name=mysql -q) bash -c "mysqldump -uroot -p${pass} --opt --all-databases" > undercloud-all-databases.sql
+
+    - name: Install latest repos
+      shell: |
+        dnf install https://trunk.rdoproject.org/centos8/component/tripleo/current/$(xmllint --html <(curl https://trunk.rdoproject.org/centos8/component/tripleo/current/) | egrep 'a href="python3-tripleo-repos' | cut -f 3 -d '>' | cut -f 1 -d '<')
+      become: true
+
+    - name: Enable master branch
+      shell: |
+        sudo -E tripleo-repos current-tripleo
+

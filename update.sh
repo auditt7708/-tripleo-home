@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
 update_prepare(){
-	openstack overcloud update prepare --templates --debug --disable-validations --deployed-server \
+	openstack overcloud update prepare --templates --disable-validations --deployed-server \
+		--heat-container-api-image tripleo-director.ctlplane.localdomain:8787/tripleomaster/openstack-heat-api:current-tripleo \
+		--heat-container-engine-image tripleo-director.ctlplane.localdomain:8787/tripleomaster/openstack-heat-engine:current-tripleo \
                 -r /home/stack/templates/roles_data.yaml \
                 -n /home/stack/templates/network_data_v2.yaml \
                 -e /usr/share/openstack-tripleo-heat-templates/environments/deployed-server-environment.yaml \
@@ -21,6 +23,7 @@ update_prepare(){
                 -e /home/stack/templates/service_tuning.yaml \
                 -e /home/stack/templates/baremetal-deployed.yaml \
                 -e /home/stack/templates/vips-deployed.yaml \
+		-e /home/stack/templates/overcloud-networks-deployed.yaml \
                 -e /home/stack/templates/vip_mapping.yaml \
                 -e /home/stack/templates/set-deletion-policy.yaml \
                 -e /home/stack/templates/bne-home-ldap-config.yaml \

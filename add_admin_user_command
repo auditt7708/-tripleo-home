@@ -1,0 +1,3 @@
+openstack role add --domain $(openstack domain show bne-home.net -f value -c id)\
+    --user $(openstack user show admin --domain default -f value -c id) \
+    $(openstack role show admin -c id -f value)

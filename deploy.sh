@@ -24,6 +24,7 @@ deploy(){
                 -e /home/stack/templates/baremetal-deployed.yaml \
                 -e /home/stack/templates/vips-deployed.yaml \
                 -e /home/stack/templates/vip_mapping.yaml \
+		-e /home/stack/templates/overcloud-networks-deployed.yaml \
                 -e /home/stack/templates/set-deletion-policy.yaml \
 		-e /home/stack/templates/bne-home-ldap-config.yaml \
                 -e /home/stack/containers-prepare-parameter.yaml
