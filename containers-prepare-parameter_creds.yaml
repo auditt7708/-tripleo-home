@@ -1,5 +1,0 @@
-parameter_defaults:
-  ContainerImageRegistryCredentials:
-    quay.io:
-      bshephar: "iUioaKHYQT1ovtBFyYfQWcz3WdvJEyPXI7/PMWOIBGSc4Gn++Ft5T4dNaMmJAiw3"
-
