@@ -71,11 +71,16 @@ network_config:
   addresses:
   - ip_netmask: {{ lookup('vars', networks_lower["External"] ~ '_ip') }}/{{ lookup('vars', networks_lower["External"] ~ '_cidr') }}
   members:
-  - type: interface
-    name: nic8
+  - type: ovs_bond
+    name: bond0
     mtu: {{ lookup('vars', networks_lower["External"] ~ '_mtu') }}
-    use_dhcp: false
-    primary: true
-  - type: interface
-    name: nic9
-    mtu: {{ lookup('vars', networks_lower["External"] ~ '_mtu') }}
+    ovs_options: {{ bond_interface_ovs_options }}
+    members:
+    - type: interface
+      name: nic8
+      mtu: {{ lookup('vars', networks_lower["External"] ~ '_mtu') }}
+      use_dhcp: false
+      primary: true
+    - type: interface
+      name: nic9
+      mtu: {{ lookup('vars', networks_lower["External"] ~ '_mtu') }}
