@@ -1,0 +1,54 @@
+- name: Controller
+  hostname_format: overcloud-controller-%index%
+  count: 1
+  defaults:
+    profile: control
+    managed: false
+    networks:
+    - network: ctlplane
+      subnet: ctlplane_subnet
+      fixed_ip: 192.168.24.10
+    - network: external
+      subnet: external_subnet
+      fixed_ip: 172.20.12.80
+    - network: internal_api
+      subnet: internal_api_subnet
+      fixed_ip: 172.16.2.85
+    - network: storage
+      subnet: storage_subnet
+      fixed_ip: 172.16.1.148
+    - network: storage_mgmt
+      subnet: storage_mgmt_subnet
+    - network: tenant
+      subnet: tenant_subnet
+      fixed_ip: 172.16.0.244
+    network_config:
+      template: /home/stack/templates/nic-configs/multiple_nics.j2
+      default_route_network:
+      - external
+- name: Compute
+  hostname_format: overcloud-compute-%index%
+  count: 2
+  defaults:
+    profile: compute
+    managed: false
+    networks:
+    - network: ctlplane
+      subnet: ctlplane_subnet
+      fixed_ip: 192.168.24.11
+    - network: internal_api
+      subnet: internal_api_subnet
+      fixed_ip: 172.16.2.84
+    - network: tenant
+      subnet: tenant_subnet
+      fixed_ip: 172.16.0.243
+    - network: storage
+      subnet: storage_subnet
+      fixed_ip: 172.16.1.147
+    - network: external
+      subnet: external_subnet
+      fixed_ip: 172.20.12.67
+    network_config:
+      template: /home/stack/templates/nic-configs/multiple_nics.j2
+      default_route_network:
+      - external
