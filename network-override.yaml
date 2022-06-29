@@ -1,0 +1,4 @@
+parameter_defaults:
+    DockerInsecureRegistryAddress: "registry.okd4.bne-shift.net:8443"
+    DockerPuppetDebug: True
+    UndercloudNetworkConfigTemplate: '/home/stack/undercloud-templates/undercloud.j2'
