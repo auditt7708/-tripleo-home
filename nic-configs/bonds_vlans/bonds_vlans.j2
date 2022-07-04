@@ -7,6 +7,10 @@
 network_config:
 - type: interface
   name: nic1
+  use_dhcp: true
+  defroute: false
+- type: interface
+  name: nic2
   mtu: {{ ctlplane_mtu }}
   use_dhcp: false
   addresses:
@@ -15,28 +19,31 @@ network_config:
 - type: ovs_bridge
   name: {{ neutron_physical_bridge_name }}
   dns_servers: {{ ctlplane_dns_nameservers }}
+  addresses:
+  - ip_netmask: {{ lookup('vars', networks_lower['External'] ~ '_ip') }}/{{ lookup('vars', networks_lower['External'] ~ '_cidr') }}
+  defroute: true
   domain: {{ dns_search_domains }}
   members:
   - type: ovs_bond
     name: bond1
     mtu: {{ min_viable_mtu }}
-    ovs_options: {{ bond_interface_ovs_options }}
+    ovs_options: "bond_mode=active-backup"
     members:
     - type: interface
-      name: nic2
+      name: nic3
       mtu: {{ min_viable_mtu }}
       primary: true
     - type: interface
-      name: nic3
+      name: nic4
       mtu: {{ min_viable_mtu }}
 {% for network in role_networks %}
   - type: vlan
     mtu: {{ lookup('vars', networks_lower[network] ~ '_mtu') }}
     vlan_id: {{ lookup('vars', networks_lower[network] ~ '_vlan_id') }}
+{% if network != 'External' %}
     addresses:
     - ip_netmask: {{ lookup('vars', networks_lower[network] ~ '_ip') }}/{{ lookup('vars', networks_lower[network] ~ '_cidr') }}
     routes: {{ lookup('vars', networks_lower[network] ~ '_host_routes') }}
-{% if network == 'External' %}
-    defroute: true
+    defroute: false
 {% endif %}
 {%- endfor %}

@@ -32,6 +32,8 @@
   defaults:
     profile: compute
     managed: false
+  instances:
+  - hostname: overcloud-compute-0
     networks:
     - network: ctlplane
       subnet: ctlplane_subnet
@@ -48,6 +50,23 @@
     - network: external
       subnet: external_subnet
       fixed_ip: 172.20.12.67
+  - hostname: overcloud-compute-1
+    networks:
+    - network: ctlplane
+      subnet: ctlplane_subnet
+      fixed_ip: 192.168.24.15
+    - network: internal_api
+      subnet: internal_api_subnet
+      fixed_ip: 172.16.2.89
+    - network: tenant
+      subnet: tenant_subnet
+      fixed_ip: 172.16.0.247
+    - network: storage
+      subnet: storage_subnet
+      fixed_ip: 172.16.1.151
+    - network: external
+      subnet: external_subnet
+      fixed_ip: 172.20.12.71
     network_config:
       template: /home/stack/templates/nic-configs/multiple_nics.j2
       default_route_network:

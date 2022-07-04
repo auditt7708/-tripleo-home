@@ -1,0 +1,9 @@
+---
+- hosts: all
+  gather_facts: false
+  tasks:
+
+    - name: Send tripleo repos
+      copy:
+        src: /etc/yum.repos.d/
+        dest: /etc/yum.repos.d/

@@ -1,0 +1,68 @@
+---
+- hosts: localhost
+  gather_facts: False
+  tasks:
+
+
+  - name: Collect OpenStack Keystone domains infos
+    openstack.cloud.identity_domain_info:
+      cloud: "overcloud"
+    register: domain_result
+  
+  - name: Print results
+    debug:
+      msg: "{{ domain_result }}"
+
+  - name: Keystone cleanup block
+    block:
+
+    - name: Get keystone services
+      shell: openstack service list -c "Name" -c "Type" -f json 2>/dev/null
+      register: keystone_service_list
+  
+    - name: Debug print services
+      debug:
+        msg: "Service: {{ item.key }}"
+      loop: "{{ keystone_resources | dict2items }}"
+  
+    - name: Debug print active
+      debug:
+        msg: "Active Service: {{ item.Name }}"
+      loop: "{{ keystone_service_list.stdout | from_json }}"
+      when: item.Name not in keystone_resources
+
+    - name: Set fact
+      set_fact:
+        removed_services: []
+
+    - name: Add removed services to fact
+      set_fact:
+        removed_services: "{{ removed_services + [item.Name] }}"
+      loop: "{{ keystone_service_list.stdout | from_json }}"
+      when:
+        - item.Name not in keystone_resources
+        - item != "keystone"
+
+    - name: Print fact
+      debug:
+        msg: "{{ removed_services }}"
+
+        #    - name: Delete keystone services not enabled
+        #      shell: |
+        #          {% if item not in keystone_resources %}
+        #            {% if item == "keystone" %}
+        #              echo "Preserve Keystone"
+        #            {% else %}
+        #              openstack service delete "{{ item }}"
+        #            {%- endif %}
+        #          {%- endif %}
+        #      loop: "{{ keystone_service_list.stdout_lines }}"
+        #      register: cleanup_result
+        #      changed_when: '"openstack service delete" in cleanup_result.cmd'
+        #  
+        #    - name: Debug output for cleanup task
+        #      debug:
+        #        msg: "Results: {{ cleanup_result }}"
+    
+    environment:
+      OS_CLOUD: overcloud

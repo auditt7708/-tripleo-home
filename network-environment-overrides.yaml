@@ -13,9 +13,7 @@
 # Then include this environment file to use bond-with-vlans NIC configs.
 
 parameter_defaults:
-  ControllerNetworkConfigTemplate: '~/templates/nic-configs/multiple_nics_dvr.j2'
-  ComputeNetworkConfigTemplate: '~/templates/nic-configs/multiple_nics_dvr.j2'
-  BlockStorageNetworkConfigTemplate: '~/templates/nic-configs/multiple_nics.j2'
-  ObjectStorageNetworkConfigTemplate: '~/templates/nic-configs/multiple_nics.j2'
-  CephStorageNetworkConfigTemplate: '~/templates/nic-configs/multiple_nics.j2'
-  ComputeDellNetworkConfigTemplate: '~/templates/nic-configs/bonds_vlans/bonds_vlans.j2'
+  ControllerNetworkConfigTemplate: '/home/stack/templates/nic-configs/multiple_nics.j2'
+  ComputeNetworkConfigTemplate: '/home/stack/templates/nic-configs/multiple_nics.j2'
+  TripleOAnsibleFreeStrategy: tripleo_free
+  TripleOAnsibleLinearStrategy: tripleo_linear

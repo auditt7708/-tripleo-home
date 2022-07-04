@@ -18,9 +18,9 @@ parameter_defaults:
       source: 172.20.0.0/16
       action: insert
 
-  ## After Swift has been removed from the Undercloud, we can't use it to upload Swift Rings to:
-  SwiftRingPutTempurl: ''
-  SwiftRingGetTempurl: ''
+  DeploymentServerExcludelist: []
+  HideSensitiveLogs: False
+  MysqlRootPassword: "szeJHVOnO5"
 
 resource_registry:
   OS::TripleO::Network::Ports::ControlPlaneVipPort: OS::Heat::None

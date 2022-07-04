@@ -14,30 +14,27 @@ parameter_defaults:
   # Mandatory. This parameter must be set by the user.
   # Type: string
   SSLRootCertificate: |
-          -----BEGIN CERTIFICATE-----
-          MIID8zCCAtugAwIBAgIUbyyHzRPPCWWLroOS9e8fHPgWpeIwDQYJKoZIhvcNAQEL
-          BQAwgYgxCzAJBgNVBAYTAkFVMRMwEQYDVQQIDApRdWVlbnNsYW5kMREwDwYDVQQH
-          DAhCcmlzYmFuZTERMA8GA1UECgwIYm5lLWhvbWUxEzARBgNVBAMMCnRyaXBsZW9f
-          Y2ExKTAnBgkqhkiG9w0BCQEWGmJyZW5kYW4uc2hlcGhhcmRAZ21haWwuY29tMB4X
-          DTIwMTEzMDIyMjA0MFoXDTIxMTEzMDIyMjA0MFowgYgxCzAJBgNVBAYTAkFVMRMw
-          EQYDVQQIDApRdWVlbnNsYW5kMREwDwYDVQQHDAhCcmlzYmFuZTERMA8GA1UECgwI
-          Ym5lLWhvbWUxEzARBgNVBAMMCnRyaXBsZW9fY2ExKTAnBgkqhkiG9w0BCQEWGmJy
-          ZW5kYW4uc2hlcGhhcmRAZ21haWwuY29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8A
-          MIIBCgKCAQEA4XZgJLcRr8FmbElifbF3s6/f3klMNxGQx/mJoeVHBhR4OQtXLRsj
-          7EFyH7uS4Vd6S5zKQs4SH8r+JY51kQRB8OG8tCIwIhfgmtKlnGYG59e5mTJVVthi
-          zRhZfXK+uY6+3uPfUqh43UTF9fISVOH6KUQFSwkUybJ2x4jsfip61InDjA3N0lAb
-          QLVYEMfwlMO3ngEdBX2/SzpLK8fiDkvkD5njbjwy7H6XQNFoyCQpUOTTI+efCKM7
-          2ZIgPe3GWGBtFPbKW5kMR0z5l1cP1R6zOxwqsjLiSSNVRDGWKY7FpS+FwJUNqx8k
-          w+TxjDBSPzXjpVg87ba1y3GzLpvTdj3H6wIDAQABo1MwUTAdBgNVHQ4EFgQUk5GY
-          Njh/2/v8rkNCUiPI4dWus4IwHwYDVR0jBBgwFoAUk5GYNjh/2/v8rkNCUiPI4dWu
-          s4IwDwYDVR0TAQH/BAUwAwEB/zANBgkqhkiG9w0BAQsFAAOCAQEAT392BeJbX5vN
-          Vpd5rYo1d5pmJMqzbD5wcoT2Q4hs8I9iCEcstSTsMllMa9DCRwfk7EMQDL4/dIjG
-          8KPnLz1QzSWow25SNJJPka4mF4ui4JadUjzcrWl5Y27RSUbucmq3//Mn6sDbM8oW
-          qLKC3XFJXtuAC7NkxWNhyaiZqdmmz78asMRcFwsD0femP2NOZZ4qm7/gFoWFJhCz
-          dcXS0d1aPpUPWNuRkzzbx0rIPmtTUsmVGpJkeANECjvFPBJ866pgfaJjLDpLm80Z
-          AhUTwh1TCaEAX9MX9li9bJ4XZgDukB957dy3LyIa1n7BXpP4KvoVt6EEUpsDO7p/
-          MXmcg4eO0Q==
-          -----END CERTIFICATE-----
-          
+         -----BEGIN CERTIFICATE-----
+         MIIDmzCCAoOgAwIBAgIUPxuSCaqGPfuM48Ldl7QGYONzpMMwDQYJKoZIhvcNAQEL
+         BQAwXTELMAkGA1UEBhMCQVUxEzARBgNVBAgMClF1ZWVuc2xhbmQxETAPBgNVBAcM
+         CEJyaXNiYW5lMREwDwYDVQQKDAhibmUtaG9tZTETMBEGA1UEAwwKVHJpcGxlTyBD
+         QTAeFw0yMjAzMzAwNDE5MzhaFw0yMzAzMzAwNDE5MzhaMF0xCzAJBgNVBAYTAkFV
+         MRMwEQYDVQQIDApRdWVlbnNsYW5kMREwDwYDVQQHDAhCcmlzYmFuZTERMA8GA1UE
+         CgwIYm5lLWhvbWUxEzARBgNVBAMMClRyaXBsZU8gQ0EwggEiMA0GCSqGSIb3DQEB
+         AQUAA4IBDwAwggEKAoIBAQCsr8hHqyoweBRo4QuveMUNZcXuhuKGTMJxgh8rs+El
+         nVAdQxFtDCSQeKJ03e/lHc+uM8NxTSjzV7uWXzDi8Tf4IBSsZemzYyUNTh9qqZsH
+         /IODDk1io7M89smmDlI5bMS/7dhEytNFY5URbqf2Y1O7OAXSPigXb41P3ojE1VA+
+         qXOjfjd8bK4ew6OoUL6kEcIuvtksA3l5MEcUpQ9pcUV8QNlommrDUOZsJi/GGHBp
+         B9D5JiyJZtyKGY+y0w2ywd2toc9njkbHVfJYmNBWexvKMQ89Sghirxj5jQf53SIJ
+         GtEzOX3deWaahwaah4vvy2cpx+FnO6rK0lCGrB3sXP9lAgMBAAGjUzBRMB0GA1Ud
+         DgQWBBQP32JPFJ5XWkiYhZ1X+cFEPyMnYTAfBgNVHSMEGDAWgBQP32JPFJ5XWkiY
+         hZ1X+cFEPyMnYTAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQB9
+         ti8i4PQ8xGgFDxkbT93y9iExlpDZt0ES3O7lSn2jLaOdog2Es1Qsm9ozUEFqLiya
+         tUOMuhlFN07hN+zOPaQjVMxyfg1LiE1mwchi+EFrlWkTvutmxXAPzSUIHtfC97n3
+         qKMEZZORwWzBmWSw5t+D6fB27wJgujM09E5vfy/WEssQsiOtgSSR+24ZuAPrQvJL
+         JgB/rw64KuTyzw39gmcO2zjopYFpKvxbYyhH4R1cHFMG5ztK43dET/AtdPQP/8Ax
+         QHu2uaT2NcJ+o9WzotGWP2k/dT0ymll3bQ0J2OTbsXGzqBtchI/d3dqieJZbBaSG
+         fSRTXSrxFvVslzK5U+1+
+         -----END CERTIFICATE----- 
 resource_registry:
   OS::TripleO::NodeTLSCAData: /usr/share/openstack-tripleo-heat-templates/puppet/extraconfig/tls/ca-inject.yaml

@@ -1,0 +1,264 @@
+{
+    "results": [
+        {
+            "Duration": "",
+            "Host_Group": "nova_api",
+            "Reasons": "",
+            "Status": "FAILED",
+            "Status_by_Host": "No host matched,FAILED",
+            "UUID": "1aa3eb31-9d97-41df-b212-806688d6815d",
+            "Unreachable_Hosts": "",
+            "Validations": "nova-status"
+        },
+        {
+            "Duration": "0:00:04.381",
+            "Host_Group": "localhost",
+            "Reasons": "localhost: One or more items failed\n",
+            "Status": "FAILED",
+            "Status_by_Host": "localhost,FAILED",
+            "UUID": "48418ae6-bd21-4ecc-899e-48f0310e2d7a",
+            "Unreachable_Hosts": "",
+            "Validations": "check-disk-space-pre-upgrade"
+        },
+        {
+            "Duration": "0:00:01.149",
+            "Host_Group": "localhost",
+            "Reasons": "",
+            "Status": "PASSED",
+            "Status_by_Host": "localhost,PASSED",
+            "UUID": "e743ae83-c0b3-4ecd-8485-7267fc6e61e4",
+            "Unreachable_Hosts": "",
+            "Validations": "check-ftype"
+        },
+        {
+            "Duration": "0:00:01.827",
+            "Host_Group": "localhost",
+            "Reasons": "localhost: No packages given to check.\n",
+            "Status": "FAILED",
+            "Status_by_Host": "localhost,FAILED",
+            "UUID": "77741468-9593-422a-9aa9-d37c7f47a826",
+            "Unreachable_Hosts": "",
+            "Validations": "check-latest-packages-version"
+        },
+        {
+            "Duration": "0:00:01.916",
+            "Host_Group": "localhost",
+            "Reasons": "localhost: The RAM on the system is 17724 MB, the minimal rec\nommended value is 24576 MB.",
+            "Status": "FAILED",
+            "Status_by_Host": "localhost,FAILED",
+            "UUID": "9d2f3bb6-2f0d-4957-8846-21412e61b285",
+            "Unreachable_Hosts": "",
+            "Validations": "check-ram"
+        },
+        {
+            "Duration": "0:00:07.738",
+            "Host_Group": "all",
+            "Reasons": "",
+            "Status": "PASSED",
+            "Status_by_Host": "localhost,PASSED",
+            "UUID": "8d9f7645-2844-4999-b57f-80b32a5d5465",
+            "Unreachable_Hosts": "",
+            "Validations": "check-rsyslog"
+        },
+        {
+            "Duration": "0:00:07.349",
+            "Host_Group": "all",
+            "Reasons": "",
+            "Status": "PASSED",
+            "Status_by_Host": "localhost,PASSED",
+            "UUID": "b57e33f4-06fc-45ec-a37a-f21bbe9448d2",
+            "Unreachable_Hosts": "",
+            "Validations": "ntp"
+        },
+        {
+            "Duration": "0:00:07.617",
+            "Host_Group": "all",
+            "Reasons": "",
+            "Status": "PASSED",
+            "Status_by_Host": "localhost,PASSED",
+            "UUID": "6b71804c-568e-43ca-8f1a-9f5874e15f67",
+            "Unreachable_Hosts": "",
+            "Validations": "service-status"
+        },
+        {
+            "Duration": "0:00:06.233",
+            "Host_Group": "all",
+            "Reasons": "",
+            "Status": "PASSED",
+            "Status_by_Host": "localhost,PASSED",
+            "UUID": "c0a0aa2c-dcdc-46c6-b76f-2bd33542b443",
+            "Unreachable_Hosts": "",
+            "Validations": "validate-selinux"
+        },
+        {
+            "Duration": "0:00:01.903",
+            "Host_Group": "all",
+            "Reasons": "",
+            "Status": "PASSED",
+            "Status_by_Host": "localhost,PASSED",
+            "UUID": "4ca8378f-b3e3-4fe4-92b0-2803cc3ab7da",
+            "Unreachable_Hosts": "",
+            "Validations": "package-version"
+        },
+        {
+            "Duration": "",
+            "Host_Group": "undercloud",
+            "Reasons": "",
+            "Status": "FAILED",
+            "Status_by_Host": "No host matched,FAILED",
+            "UUID": "c3f71132-296a-457c-8738-e0ea8febc529",
+            "Unreachable_Hosts": "",
+            "Validations": "node-health"
+        },
+        {
+            "Duration": "",
+            "Host_Group": "undercloud",
+            "Reasons": "",
+            "Status": "FAILED",
+            "Status_by_Host": "No host matched,FAILED",
+            "UUID": "3e71b900-b02b-4851-914c-2f15ed2907d7",
+            "Unreachable_Hosts": "",
+            "Validations": "collect-flavors-and-verify-profiles"
+        },
+        {
+            "Duration": "",
+            "Host_Group": "nova_libvirt",
+            "Reasons": "",
+            "Status": "FAILED",
+            "Status_by_Host": "No host matched,FAILED",
+            "UUID": "6116c276-bbde-4204-b8c2-0f8f2222f662",
+            "Unreachable_Hosts": "",
+            "Validations": "compute-tsx"
+        },
+        {
+            "Duration": "",
+            "Host_Group": "undercloud",
+            "Reasons": "",
+            "Status": "FAILED",
+            "Status_by_Host": "No host matched,FAILED",
+            "UUID": "5ce301e6-4700-4675-a023-43b7bb87659c",
+            "Unreachable_Hosts": "",
+            "Validations": "undercloud-ipa-server-check"
+        },
+        {
+            "Duration": "",
+            "Host_Group": "undercloud, allovercloud",
+            "Reasons": "",
+            "Status": "FAILED",
+            "Status_by_Host": "No host matched,FAILED",
+            "UUID": "a2f4fa2d-a9ef-4a70-a450-3d0c5af22fe1",
+            "Unreachable_Hosts": "",
+            "Validations": "container-status"
+        },
+        {
+            "Duration": "",
+            "Host_Group": "undercloud",
+            "Reasons": "",
+            "Status": "FAILED",
+            "Status_by_Host": "No host matched,FAILED",
+            "UUID": "4e2a1e3d-6138-4c3a-a620-a56fb5830ead",
+            "Unreachable_Hosts": "",
+            "Validations": "undercloud-disabled-services"
+        },
+        {
+            "Duration": "",
+            "Host_Group": "undercloud",
+            "Reasons": "",
+            "Status": "FAILED",
+            "Status_by_Host": "No host matched,FAILED",
+            "UUID": "b1481857-8274-4707-8119-2fe75c48efae",
+            "Unreachable_Hosts": "",
+            "Validations": "undercloud-heat-purge-deleted"
+        },
+        {
+            "Duration": "",
+            "Host_Group": "undercloud",
+            "Reasons": "",
+            "Status": "FAILED",
+            "Status_by_Host": "No host matched,FAILED",
+            "UUID": "84ab1d39-d7df-4e24-b3ab-e521a77db590",
+            "Unreachable_Hosts": "",
+            "Validations": "tripleo-latest-packages-version"
+        },
+        {
+            "Duration": "",
+            "Host_Group": "undercloud",
+            "Reasons": "",
+            "Status": "FAILED",
+            "Status_by_Host": "No host matched,FAILED",
+            "UUID": "faeadf31-941f-4065-9153-29f49eb13a5f",
+            "Unreachable_Hosts": "",
+            "Validations": "image-serve"
+        },
+        {
+            "Duration": "",
+            "Host_Group": "undercloud",
+            "Reasons": "",
+            "Status": "FAILED",
+            "Status_by_Host": "No host matched,FAILED",
+            "UUID": "9ebae659-a65b-4a6e-ac6f-862bf3d4694b",
+            "Unreachable_Hosts": "",
+            "Validations": "openstack-endpoints"
+        },
+        {
+            "Duration": "",
+            "Host_Group": "undercloud",
+            "Reasons": "",
+            "Status": "FAILED",
+            "Status_by_Host": "No host matched,FAILED",
+            "UUID": "db554a50-1c7e-4b57-8915-4f6440c17c10",
+            "Unreachable_Hosts": "",
+            "Validations": "ironic-boot-configuration"
+        },
+        {
+            "Duration": "",
+            "Host_Group": "undercloud",
+            "Reasons": "",
+            "Status": "FAILED",
+            "Status_by_Host": "No host matched,FAILED",
+            "UUID": "36513669-8552-472c-b6cc-2871014631d9",
+            "Unreachable_Hosts": "",
+            "Validations": "undercloud-service-status"
+        },
+        {
+            "Duration": "",
+            "Host_Group": "undercloud, allovercloud",
+            "Reasons": "",
+            "Status": "FAILED",
+            "Status_by_Host": "No host matched,FAILED",
+            "UUID": "32041487-1f7c-42ec-b25c-cfa50558ccc7",
+            "Unreachable_Hosts": "",
+            "Validations": "repos"
+        },
+        {
+            "Duration": "",
+            "Host_Group": "undercloud",
+            "Reasons": "",
+            "Status": "FAILED",
+            "Status_by_Host": "No host matched,FAILED",
+            "UUID": "20a01a24-676e-4f0e-ae0a-72ed1c6c0e2a",
+            "Unreachable_Hosts": "",
+            "Validations": "stack-health"
+        },
+        {
+            "Duration": "0:00:00.524",
+            "Host_Group": "all",
+            "Reasons": "",
+            "Status": "PASSED",
+            "Status_by_Host": "localhost,PASSED",
+            "UUID": "fb926d33-ee80-4e5c-b7d2-5ea429cd04f8",
+            "Unreachable_Hosts": "",
+            "Validations": "system-encoding"
+        },
+        {
+            "Duration": "",
+            "Host_Group": "undercloud",
+            "Reasons": "",
+            "Status": "FAILED",
+            "Status_by_Host": "No host matched,FAILED",
+            "UUID": "8be91a24-f0a8-402f-85d9-2ca7eefcc0e1",
+            "Unreachable_Hosts": "",
+            "Validations": "undercloud-disk-space-pre-upgrade"
+        }
+    ]
+}

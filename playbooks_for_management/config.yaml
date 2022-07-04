@@ -1,0 +1,67 @@
+---
+network_config:
+- type: interface
+  name: nic1
+  use_dhcp: true
+  defroute: false
+- type: interface
+  name: nic2
+  mtu: 1500
+  dns_servers: ['192.168.1.221']
+  domain: []
+  routes: []
+  use_dhcp: false
+  addresses:
+  - ip_netmask: 192.168.24.11/24
+- type: interface
+  name: nic3
+  mtu: 9000
+  dns_servers: ['192.168.1.221']
+  domain: []
+  routes: []
+  use_dhcp: false
+  addresses:
+  - ip_netmask: 172.16.2.84/24
+- type: interface
+  name: nic4
+  mtu: 9000
+  dns_servers: ['192.168.1.221']
+  domain: []
+  routes: []
+  use_dhcp: false
+  addresses:
+  - ip_netmask: 172.16.1.147/24
+- type: ovs_bridge
+  name: br-tenant
+  mtu: 9000
+  dns_servers: ['192.168.1.221']
+  domain: []
+  routes: []
+  use_dhcp: false
+  addresses:
+  - ip_netmask: 172.16.0.243/24
+  members:
+  - type: interface
+    name: nic6
+    mtu: 9000
+    use_dhcp: false
+    primary: true
+- type: interface
+  name: nic7
+  use_dhcp: false
+- type: ovs_bridge
+  name: br-ex
+  mtu: 9000
+  dns_servers: ['192.168.1.221']
+  domain: []
+  routes: [{'default': True, 'next_hop': '172.20.0.254'}]
+  use_dhcp: false
+  defroute: true
+  addresses:
+  - ip_netmask: 172.20.12.81/16
+  members:
+  - type: interface
+    name: nic8
+    mtu: 9000
+    use_dhcp: false
+    primary: true

@@ -1,6 +1,6 @@
 parameter_defaults:
   ControllerCount: 1
-  ComputeCount: 2
+  ComputeCount: 1
   ComputeDVRCount: 0
   OvercloudComputeDVRFlavor: compute
   OvercloudComputeFlavor: compute

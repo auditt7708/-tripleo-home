@@ -1,0 +1,9 @@
+all:
+  hosts:
+    ubuntu-host:
+      ansible_host: 172.20.12.96
+      tenant_ip: 172.16.2.99
+    overcloud-compute-1:
+      ansible_host: 192.168.24.13
+      ansible_user: heat-admin
+      tenant_ip: 172.16.0.245

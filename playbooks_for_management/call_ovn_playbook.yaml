@@ -1,0 +1,23 @@
+---
+
+- hosts: overcloud-compute-1
+  gather_facts: true
+  vars:
+      tripleo_ovn_multi_rhel: Ture
+      tripleo_ovn_controller_images:
+       "8": "quay.io/tripleomastercentos8/openstack-ovn-controller:current-tripleo"
+       "9": "quay.io/tripleomastercentos9/openstack-ovn-controller:current-tripleo"
+      tripleo_ovn_bridge: br-int
+      tripleo_ovn_bridge_mappings: ["datacentre:br-ex"]
+      tripleo_ovn_encap_type: geneve
+      tripleo_ovn_dbs_vip: "172.16.2.73"
+      tripleo_enable_dvr: True
+      tripleo_enable_hw_offload: False
+      tripleo_ovn_controller_image: "registry.okd4.bne-shift.net:8443/tripleomastercentos9/openstack-ovn-controller:current-tripleo"
+      tripleo_ovn_sb_server_port: "6642"
+      tripleo_enable_internal_tls: false
+      tripleo_internal_tls_ca_file: "blah"
+  roles:
+    #    - role: tripleo_bootstrap
+    #    - role: tripleo_container_manage
+    - role: tripleo_ovn

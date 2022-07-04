@@ -4,8 +4,6 @@ deploy(){
 	openstack overcloud deploy --disable-validations --deployed-server \
                 --heat-container-api-image registry.okd4.bne-shift.net:8443/tripleomastercentos9/openstack-heat-api:current-tripleo \
 		--heat-container-engine-image registry.okd4.bne-shift.net:8443/tripleomastercentos9/openstack-heat-engine:current-tripleo \
-                -r /home/stack/templates/roles_data.yaml \
-                -n /home/stack/templates/network_data_v2.yaml \
 		--answers-file /home/stack/templates/answers.yaml
 }
 

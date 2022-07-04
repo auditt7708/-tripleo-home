@@ -1,0 +1,82 @@
+- name: Ensure openvswitch is installed and running
+  block:
+    - name: Check package is installed
+      ansible.builtin.dnf:
+        name: openvswitch
+        state: present
+
+    - name: Ensure the service is running
+      ansible.builtin.systemd:
+        name: openvswitch
+        state: started
+  ignore_errors: true
+
+- name: Set external_id info based on provided vars
+  set_fact:
+    external_ids:
+      hostname: "{{ ansible_fqdn }}"
+      ovn-bridge: "{{ tripleo_ovn_bridge }}"
+      ovn-bridge-mappings: "{{ tripleo_ovn_bridge_mappings }}"
+      ovn-encap-ip: "{{ tenant_ip }}"
+      ovn-encap-type: "{{ tripleo_ovn_encap_type }}"
+      ovn-match-northd-version: True
+      ovn-monitor-all: True
+      ovn-openflow-probe-interval: 60
+      ovn-remote: "{{ tripleo_ovn_dbs_vip }}"
+      ovn-remote-probe-interval: 60000
+      rundir: "/var/run/openvswitch"
+
+- name: Set other_config
+  set_fact:
+     other_config:
+       vlan-limit: 0
+
+- name: Set DVR setting when enabled
+  block:
+    - name: Set enable-chassis-as-gw
+      set_fact:
+        cms_options:
+          ovn-cms-options: "enable-chassis-as-gw"
+
+    - name: Append CMS options to external_ids
+      set_fact:
+        external_ids: "{{ external_ids | combine(cms_options) }}"
+  when: tripleo_enable_dvr
+
+- name: Configure hw-offload when required
+  block:
+    - name: Add hw-offload if enabled
+      set_fact:
+        hw_offload:
+          hw-offload: True
+
+    - name: append other_config with hw-offload
+      set_fact:
+         other_config: "{{ other_config | combine(hw_offload) }}"
+  when: tripleo_enable_hw_offload|default(false)
+
+- name: Configure OVS external_ids
+  ansible.builtin.shell: >
+    ovs-vsctl set open . {% for key, value in external_ids.items() %} external_ids:{{ key }}={{ value }} {% endfor %}
+
+- name: Read current other_config
+  shell: >
+    ovs-vsctl get open_vswitch . other_config
+  register: other_config_existing
+
+- name: Print other_config_existing
+  debug:
+    msg: "{{ other_config_existing }}"
+
+- name: Configure OVS other_config
+  ansible.builtin.shell: >
+    ovs-vsctl set open . {% for key, value in other_config.items() %} other_config:{{ key }}={{ value }} {% endfor %}
+    {%- if not tripleo_enable_hw_offload %}
+     && ovs-vsctl remove open . other_config hw-offload
+    {% endif -%}
+
+- name: Ensure ovn_controller is running
+  ansible.builtin.systemd:
+    name: tripleo_ovn_controller
+    state: started
+  ignore_errors: True
