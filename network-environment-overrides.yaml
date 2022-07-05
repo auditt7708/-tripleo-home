@@ -14,6 +14,5 @@
 
 parameter_defaults:
   ControllerNetworkConfigTemplate: '/home/stack/templates/nic-configs/multiple_nics.j2'
-  ComputeNetworkConfigTemplate: '/home/stack/templates/nic-configs/multiple_nics.j2'
-  TripleOAnsibleFreeStrategy: tripleo_free
-  TripleOAnsibleLinearStrategy: tripleo_linear
+  StandaloneNetworkConfigTemplate: '/home/stack/templates/nic-configs/bonds_vlans.j2'
+  ComputeNetworkConfigTemplate: '/home/stack/templates/nic-configs/compute-bridge-vlans.j2'

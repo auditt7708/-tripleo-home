@@ -1,5 +1,4 @@
 parameter_defaults:
-  DnsServers: ['192.168.1.221']
   StorageMtu: 9000
   StorageMgmtMtu: 9000
   InternalApiMtu: 9000
@@ -8,9 +7,7 @@ parameter_defaults:
   PublicVirtualFixedIPs: [{'ip_address':'172.20.10.25'}]
   CloudDomain: bne-home.net
   ComputeNetworkConfigUpdate: False
-  #NetworkDeploymentActions: ['CREATE','UPDATE']
-  # ComputeNetworkDeploymentActions: ['CREATE','UPDATE']
-  NeutronEnableDVR: false
+  NeutronEnableDVR: true
   ExtraFirewallRules:
     '301 allow Prometheus':
       dport: 9100
@@ -20,7 +17,6 @@ parameter_defaults:
 
   DeploymentServerExcludelist: []
   HideSensitiveLogs: False
-  MysqlRootPassword: "szeJHVOnO5"
 
 resource_registry:
   OS::TripleO::Network::Ports::ControlPlaneVipPort: OS::Heat::None

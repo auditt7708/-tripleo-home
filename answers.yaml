@@ -1,6 +1,6 @@
 templates: /usr/share/openstack-tripleo-heat-templates/
 networks: /home/stack/templates/network_data_v2.yaml
-roles: /home/stack/templates/roles_data.yaml
+roles: /home/stack/templates/new_roles_data.yaml
 environments:
   - /usr/share/openstack-tripleo-heat-templates/environments/deployed-server-environment.yaml 
   - /usr/share/openstack-tripleo-heat-templates/environments/network-environment.yaml 
@@ -11,15 +11,13 @@ environments:
   - /home/stack/templates/storage_custom.yaml 
   - /home/stack/templates/kernel_args.yaml 
   - /home/stack/templates/compute_overcommit.yaml 
-  - /home/stack/templates/enable-tls.yaml 
-  - /home/stack/templates/tls-endpoints-public-dns.yaml 
-  - /home/stack/templates/cloudname.yaml 
-  - /home/stack/templates/inject-trust-anchor.yaml 
+    #  - /home/stack/templates/enable-tls.yaml 
+    #  - /home/stack/templates/tls-endpoints-public-dns.yaml 
+    #  - /home/stack/templates/cloudname.yaml 
+    #  - /home/stack/templates/inject-trust-anchor.yaml 
   - /home/stack/templates/service_tuning.yaml 
   - /home/stack/templates/overcloud-baremetal-deployed.yaml 
   - /home/stack/templates/overcloud-networks-deployed.yaml 
   - /home/stack/templates/overcloud-vip-deployed.yaml 
   - /home/stack/templates/vip_mapping.yaml 
-  - /home/stack/templates/set-deletion-policy.yaml 
-  - /home/stack/templates/bne-home-ldap-config.yaml 
-  - /home/stack/containers-prepare-parameters.yaml
+  - /home/stack/containers-prepare-parameter.yaml
