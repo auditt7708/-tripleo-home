@@ -1,0 +1,58 @@
+---
+network_config:
+- type: ovs_bridge
+  name: br-ex
+  mtu: 1500
+  use_dhcp: false
+  dns_servers: []
+  domain: []
+  addresses:
+  - ip_netmask: 192.168.24.38/24
+  routes: [{'default': True, 'nexthop': '192.168.24.77'}]
+  members:
+  - type: interface
+    name: nic1
+    mtu: 1500
+    # force the MAC address of the bridge to this interface
+    primary: true
+  - type: vlan
+    mtu: 1500
+    vlan_id: 20
+    addresses:
+    - ip_netmask:
+        172.16.2.80/24
+    routes: []
+  - type: vlan
+    mtu: 1500
+    vlan_id: 50
+    addresses:
+    - ip_netmask:
+        172.16.0.84/24
+    routes: []
+  - type: vlan
+    mtu: 1500
+    vlan_id: 4
+    addresses:
+    - ip_netmask:
+        172.20.14.22/16
+  - type: vlan
+    mtu: 1500
+    vlan_id: 30
+    addresses:
+    - ip_netmask:
+        172.16.1.98/24
+    routes: []
+  - type: vlan
+    mtu: 1500
+    vlan_id: 1
+    addresses:
+    - ip_netmask:
+        192.168.24.38/24
+    routes: []
+  - type: vlan
+    mtu: 1500
+    vlan_id: 40
+    addresses:
+    - ip_netmask:
+        172.16.3.187/24
+    routes: []
